@@ -1,0 +1,24 @@
+\begin{thebibliography}{1}
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{\texttt{#1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+\expandafter\ifx\csname href\endcsname\relax
+  \def\href#1#2{#2} \def\path#1{#1}\fi
+
+\bibitem{eos}
+G.~R. et. al., A tpc detector for the study of high multiplicity heavy ion
+  collisions, IEEE Transactions on Nuclear Science 37~(2) (1990) 56--64.
+\newblock \href {http://dx.doi.org/10.1109/23.106592}
+  {\path{doi:10.1109/23.106592}}.
+
+\bibitem{get}
+E.~P. et. al., Get: A generic and comprehensive electronics system for nuclear
+  physics experiments, Physics Procedia 37 (2012) 1799--1804.
+\newblock \href {http://dx.doi.org/10.1016/j.phpro.2012.02.506}
+  {\path{doi:10.1016/j.phpro.2012.02.506}}.
+
+\bibitem{blumrol}
+W.~Blum, W.~Riegler, L.~Rolandi, Particle Detection with Drift Chambers,
+  Springer, Berlin, Heidelberg, 2008.
+
+\end{thebibliography}
