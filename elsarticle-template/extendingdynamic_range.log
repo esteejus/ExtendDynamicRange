@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2018.5.2)  12 OCT 2018 10:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2018.5.2)  23 OCT 2018 20:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -261,6 +261,13 @@ contour: Using driver file `pdftex.cnt'.
 (/usr/share/texlive/texmf-dist/tex/latex/contour/pdftex.cnt
 File: pdftex.cnt 2004/11/18 v2.14 Print contoured text (HH, MH)
 ))
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.def
+File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
+))
 (/usr/share/texlive/texmf-dist/tex/latex/lineno/lineno.sty
 Package: lineno 2005/11/02 line numbers on paragraphs v4.41
 \linenopenalty=\count119
@@ -396,20 +403,20 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 (./extendingdynamic_range.aux)
 \openout1 = `extendingdynamic_range.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -442,7 +449,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 \AtBeginShipoutBox=\box39
-Package hyperref Info: Link coloring OFF on input line 49.
+Package hyperref Info: Link coloring OFF on input line 51.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -452,197 +459,218 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count142
 )
-LaTeX Info: Redefining \ref on input line 49.
-LaTeX Info: Redefining \pageref on input line 49.
-LaTeX Info: Redefining \nameref on input line 49.
+LaTeX Info: Redefining \ref on input line 51.
+LaTeX Info: Redefining \pageref on input line 51.
+LaTeX Info: Redefining \nameref on input line 51.
 
 (./extendingdynamic_range.out) (./extendingdynamic_range.out)
 \@outlinefile=\write4
 \openout4 = `extendingdynamic_range.out'.
 
- [1
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 106.
 
 
-{/usr/share/texlive/texmf-dist/fonts/map/pdftex/updmap/pdftex.map}] [2]
-<images/intrographic.png, id=59, 4513.86375pt x 2990.17125pt>
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+) [1
+
+
+{/usr/share/texlive/texmf-dist/fonts/map/pdftex/updmap/pdftex.map}]
+LaTeX Font Info:    Try loading font information for T1+cmss on input line 114.
+
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1cmss.fd
+File: t1cmss.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+) [2]
+<images/intrographic.png, id=60, 4513.86375pt x 2990.17125pt>
 File: images/intrographic.png Graphic file (type png)
 
 <use images/intrographic.png>
 Package pdftex.def Info: images/intrographic.png used on input line 124.
 (pdftex.def)             Requested size: 345.0pt x 228.54204pt.
 
-<images/padwire.png, id=61, 483.30562pt x 287.0725pt>
+<images/padwire.png, id=62, 483.30562pt x 287.0725pt>
 File: images/padwire.png Graphic file (type png)
  <use images/padwire.png>
 Package pdftex.def Info: images/padwire.png used on input line 133.
 (pdftex.def)             Requested size: 345.0pt x 204.93112pt.
 
 [3 <./images/intrographic.png>] [4 <./images/padwire.png>] [5]
-<images/defofavalanche.pdf, id=86, 558.67276pt x 348.0638pt>
+<images/defofavalanche.pdf, id=88, 558.67276pt x 348.0638pt>
 File: images/defofavalanche.pdf Graphic file (type pdf)
 
 <use images/defofavalanche.pdf>
 Package pdftex.def Info: images/defofavalanche.pdf used on input line 152.
 (pdftex.def)             Requested size: 345.0pt x 214.94225pt.
  [6 <./images/defofavalanche.pdf>]
-<images/expprf.pdf, id=240, 569.12625pt x 377.41pt>
+<images/expprf.pdf, id=243, 569.12625pt x 377.41pt>
 File: images/expprf.pdf Graphic file (type pdf)
  <use images/expprf.pdf>
-Package pdftex.def Info: images/expprf.pdf used on input line 170.
+Package pdftex.def Info: images/expprf.pdf used on input line 185.
 (pdftex.def)             Requested size: 345.0pt x 228.79158pt.
 
-[7 <./images/expprf.pdf, page is rotated 90 degrees>]
-<images/saturated_pads.pdf, id=298, 558.67276pt x 348.0638pt>
+grid=11 x 7. 
+contour: Using 16 copies for `\fontsize {5}{6}$\frac {K_{1}}{K_{2}\sqrt {K_{3}}
+} arctan(\sqrt {K_{3}}tanh\left [(K_{2}(\frac {x}{h}+\frac {w}{2h})\right ]) - 
+arctan(\sqrt {K_{3}}tanh\left [(K_{2}(\frac {x}{h}-\frac {w}{2h})\right ])$ ' o
+n input line 186.
+contour: Using 16 copies for ` ' on input line 187.
+[7] <images/saturated_pads.pdf, id=259, 558.67276pt x 348.0638pt>
 File: images/saturated_pads.pdf Graphic file (type pdf)
 
 <use images/saturated_pads.pdf>
-Package pdftex.def Info: images/saturated_pads.pdf used on input line 181.
+Package pdftex.def Info: images/saturated_pads.pdf used on input line 207.
 (pdftex.def)             Requested size: 345.0pt x 214.94225pt.
-Missing character: There is no â in font cmr8!
-Missing character: There is no € in font cmr8!
-Missing character: There is no ¢ in font cmr8!
- [8]
-<images/data.pdf, id=306, 4742.71875pt x 2913.38437pt>
+ [8 <./images/expprf.pdf, page is rotated 90 degrees>] [9 <./images/saturated_p
+ads.pdf>]
+<images/data.pdf, id=460, 4742.71875pt x 2913.38437pt>
 File: images/data.pdf Graphic file (type pdf)
  <use images/data.pdf>
-Package pdftex.def Info: images/data.pdf used on input line 192.
+Package pdftex.def Info: images/data.pdf used on input line 218.
 (pdftex.def)             Requested size: 345.0pt x 211.91512pt.
 
-[9 <./images/saturated_pads.pdf>] [10 <./images/data.pdf>]
-<images/dedxcompare_nodesat.pdf, id=474, 569.12625pt x 377.41pt>
+[10 <./images/data.pdf>]
+<images/dedxcompare_nodesat.pdf, id=482, 569.12625pt x 377.41pt>
 File: images/dedxcompare_nodesat.pdf Graphic file (type pdf)
 
 <use images/dedxcompare_nodesat.pdf>
-Package pdftex.def Info: images/dedxcompare_nodesat.pdf used on input line 206.
+Package pdftex.def Info: images/dedxcompare_nodesat.pdf used on input line 232.
 
 (pdftex.def)             Requested size: 345.0pt x 228.79158pt.
 
-<images/dedxcompare_new.pdf, id=477, 569.12625pt x 377.41pt>
+<images/dedxcompare_new.pdf, id=485, 569.12625pt x 377.41pt>
 File: images/dedxcompare_new.pdf Graphic file (type pdf)
 
 <use images/dedxcompare_new.pdf>
-Package pdftex.def Info: images/dedxcompare_new.pdf used on input line 214.
+Package pdftex.def Info: images/dedxcompare_new.pdf used on input line 240.
 (pdftex.def)             Requested size: 345.0pt x 228.79158pt.
  [11 <./images/dedxcompare_nodesat.pdf, page is rotated 90 degrees>]
-<images/cocktail_sat.png, id=528, 6018.485pt x 3986.895pt>
+<images/cocktail_sat.png, id=536, 6018.485pt x 3986.895pt>
 File: images/cocktail_sat.png Graphic file (type png)
 
 <use images/cocktail_sat.png>
-Package pdftex.def Info: images/cocktail_sat.png used on input line 224.
+Package pdftex.def Info: images/cocktail_sat.png used on input line 250.
 (pdftex.def)             Requested size: 345.0pt x 228.49641pt.
 
 contour: Using 16 copies for `\relax \fontsize {14.4}{18}\selectfont p' on inpu
-t line 225.
+t line 251.
 contour: Using 16 copies for `\relax \fontsize {14.4}{18}\selectfont d' on inpu
-t line 226.
+t line 252.
 contour: Using 16 copies for `\relax \fontsize {14.4}{18}\selectfont t' on inpu
-t line 227.
+t line 253.
 contour: Using 16 copies for `\relax \fontsize {12}{14}\selectfont ${}^{3}$He' 
-on input line 228.
+on input line 254.
 contour: Using 16 copies for `\relax \fontsize {12}{14}\selectfont ${}^{4}$He' 
-on input line 229.
+on input line 255.
 contour: Using 16 copies for `\relax \fontsize {12}{14}\selectfont ${}^{6}$Li' 
-on input line 230.
+on input line 256.
 [12 <./images/dedxcompare_new.pdf, page is rotated 90 degrees>] [13 <./images/c
-ocktail_sat.png>] <images/cocktail_desat.png, id=588, 6018.485pt x 3986.895pt>
+ocktail_sat.png>] <images/cocktail_desat.png, id=597, 6018.485pt x 3986.895pt>
 File: images/cocktail_desat.png Graphic file (type png)
 
 <use images/cocktail_desat.png>
-Package pdftex.def Info: images/cocktail_desat.png used on input line 247.
+Package pdftex.def Info: images/cocktail_desat.png used on input line 273.
 (pdftex.def)             Requested size: 345.0pt x 228.49641pt.
 
 contour: Using 16 copies for `\relax \fontsize {14.4}{18}\selectfont p' on inpu
-t line 248.
+t line 274.
 contour: Using 16 copies for `\relax \fontsize {14.4}{18}\selectfont d' on inpu
-t line 249.
+t line 275.
 contour: Using 16 copies for `\relax \fontsize {14.4}{18}\selectfont t' on inpu
-t line 250.
+t line 276.
 contour: Using 16 copies for `\relax \fontsize {12}{14}\selectfont ${}^{3}$He' 
-on input line 251.
+on input line 277.
 contour: Using 16 copies for `\relax \fontsize {12}{14}\selectfont ${}^{4}$He' 
-on input line 252.
+on input line 278.
 contour: Using 16 copies for `\relax \fontsize {12}{14}\selectfont ${}^{6}$Li' 
-on input line 253.
-<images/data_sat.png, id=591, 6018.485pt x 3986.895pt>
+on input line 279.
+<images/data_sat.png, id=600, 6018.485pt x 3986.895pt>
 File: images/data_sat.png Graphic file (type png)
 
 <use images/data_sat.png>
-Package pdftex.def Info: images/data_sat.png used on input line 270.
+Package pdftex.def Info: images/data_sat.png used on input line 296.
 (pdftex.def)             Requested size: 345.0pt x 228.49641pt.
 
 contour: Using 16 copies for `\relax \fontsize {14.4}{18}\selectfont p' on inpu
-t line 271.
+t line 297.
 contour: Using 16 copies for `\relax \fontsize {14.4}{18}\selectfont d' on inpu
-t line 272.
+t line 298.
 contour: Using 16 copies for `\relax \fontsize {14.4}{18}\selectfont t' on inpu
-t line 273.
+t line 299.
 contour: Using 16 copies for `\relax \fontsize {12}{14}\selectfont ${}^{3}$He' 
-on input line 274.
+on input line 300.
 contour: Using 16 copies for `\relax \fontsize {12}{14}\selectfont ${}^{4}$He' 
-on input line 275.
+on input line 301.
 contour: Using 16 copies for `\relax \fontsize {12}{14}\selectfont ${}^{6}$Li' 
-on input line 276.
+on input line 302.
 [14 <./images/cocktail_desat.png>]
-<images/data_desat.png, id=598, 6018.485pt x 3986.895pt>
+<images/data_desat.png, id=607, 6018.485pt x 3986.895pt>
 File: images/data_desat.png Graphic file (type png)
 
 <use images/data_desat.png>
-Package pdftex.def Info: images/data_desat.png used on input line 290.
+Package pdftex.def Info: images/data_desat.png used on input line 316.
 (pdftex.def)             Requested size: 345.0pt x 228.49641pt.
 
 contour: Using 16 copies for `\relax \fontsize {14.4}{18}\selectfont p' on inpu
-t line 291.
+t line 317.
 contour: Using 16 copies for `\relax \fontsize {14.4}{18}\selectfont d' on inpu
-t line 292.
+t line 318.
 contour: Using 16 copies for `\relax \fontsize {14.4}{18}\selectfont t' on inpu
-t line 293.
+t line 319.
 contour: Using 16 copies for `\relax \fontsize {12}{14}\selectfont ${}^{3}$He' 
-on input line 294.
+on input line 320.
 contour: Using 16 copies for `\relax \fontsize {12}{14}\selectfont ${}^{4}$He' 
-on input line 295.
+on input line 321.
 contour: Using 16 copies for `\relax \fontsize {12}{14}\selectfont ${}^{6}$Li' 
-on input line 296.
+on input line 322.
 [15 <./images/data_sat.png> <./images/data_desat.png>]
 (./extendingdynamic_range.bbl)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 318.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 344.
  [16]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 318.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 344.
  (./extendingdynamic_range.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 318.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 318.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 344.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 344.
 Package rerunfilecheck Info: File `extendingdynamic_range.out' has not changed.
 
 (rerunfilecheck)             Checksum: B2787390F4C4DF602016823A3705F233;242.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 318.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 344.
  ) 
 Here is how much of TeX's memory you used:
- 7615 strings out of 493069
- 109802 string characters out of 6138223
- 215192 words of memory out of 5000000
- 10941 multiletter control sequences out of 15000+600000
- 13080 words of font info for 46 fonts, out of 8000000 for 9000
+ 7855 strings out of 493069
+ 112641 string characters out of 6138223
+ 227334 words of memory out of 5000000
+ 11162 multiletter control sequences out of 15000+600000
+ 19475 words of font info for 51 fonts, out of 8000000 for 9000
  1137 hyphenation exceptions out of 8191
- 34i,16n,36p,1878b,381s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><
-/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/sh
-are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti7.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on extendingdynamic_range.pdf (16 pages, 5451655 bytes).
+ 34i,19n,37p,1878b,381s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr
+/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/cm-super/sfrm1000.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/public/cm-super/sfrm1200.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/cm-super/sfrm1440.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-s
+uper/sfss0500.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sf
+ti0600.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfti0800.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
+Output written on extendingdynamic_range.pdf (16 pages, 5589067 bytes).
 PDF statistics:
- 684 PDF objects out of 1000 (max. 8388607)
- 436 compressed objects within 5 object streams
- 58 named destinations out of 1000 (max. 500000)
+ 715 PDF objects out of 1000 (max. 8388607)
+ 460 compressed objects within 5 object streams
+ 60 named destinations out of 1000 (max. 500000)
  101 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -9,6 +9,8 @@
 \usepackage{color}
 \graphicspath{ {images/} }
 
+\usepackage[T1]{fontenc}
+%\usepackage[utf8]{inputenc}
 \usepackage{lineno,hyperref}
 \modulolinenumbers[5]
 
@@ -50,9 +52,7 @@
 
 \begin{frontmatter}
 
-%\title{Extending Dynamic Range of Generic Electronics for Time Projection Chambers (GET)}
 \title{Extending the Dynamic Range of Electronics in a Time Projection Chamber}
-%\title{Extending Dynamic Range of GET Electronics}
 
 %% Group authors per affiliation:
 %\author{Elsevier\fnref{myfootnote}}
@@ -72,10 +72,10 @@
 \author[riken]{M. Kurata-Nishimura}
 \author[krakow]{P. Lasko}
 \author[kor]{J. W. Lee}
-\author[krakow]{J. Lukasik}
+\author[krakow]{J. \L ukasik}
 \author[a&m]{A.B. McIntosh}
 \author[kyoto]{T. Murakami}
-\author[krakow]{P. Pawlowski}
+\author[krakow]{P. Paw\l owski}
 \author[poland]{K. Pelczar}
 \author[nscl]{C. Santamaria}
 \author[riken]{D. Suzuki}
@@ -84,15 +84,15 @@
 \author[tsing]{Y. Zhang}
 \author[]{and the S$\pi$RIT collaboration}
 
-\address[msu]{Michigan State University, Dept. Physics and Astronomy }
-\address[nscl]{National Superconducting Cyclotron Laboratory}
-\address[kor]{Department of Physics, Korea University}
-\address[riken]{RIKEN Nishina Center}
-\address[kyoto]{Department of Physics, Kyoto University}
-\address[krakow]{IFJ PAN, Krak\'{o}w}
-\address[a&m]{Dept. of Physics and Astronomy, Texas A$\&$M University}
-\address[tsing]{Department of Physics, Tsinghua University}
-\address[poland]{Faculty of Physics, Astronomy and Applied Computer Science, Jagiellonian University}
+\address[msu]{Dept. Physics and Astronomy, Michigan State University, East Lansing, Michigan, 48824, USA }
+\address[nscl]{National Superconducting Cyclotron Laboratory, East Lansing, Michigan, 48824, USA}
+\address[kor]{Department of Physics, Korea University, Seoul 136-703, Republic of Korea }
+\address[riken]{RIKEN Nishina Center, Hirosawa 2-1, Wako, Saitama 351‐0198, Japan }
+\address[kyoto]{Department of Physics, Kyoto University, Kita-shirakawa, Kyoto 606-8502, Japan }
+\address[krakow]{Institute of Nuclear Physics PAN, ul. Radzikowskiego 15231-342 Krak\'{o}w, Poland}
+\address[a&m]{Dept. of Physics and Astronomy, Texas A$\&$M University, College Station, TX 77843, USA }
+\address[tsing]{Department of Physics, Tsinghua University, Beijing 100084, P. R. China}
+\address[poland]{Faculty of Physics, Astronomy and Applied Computer Science, Jagiellonian University, ul. Go\l \k{e}bia 24, 31-007 Krak\'{o}w}
 \address[china1]{State Key Laboratory of Radiation Medicine and Protection, School of Radiation Medicine and Protection, Soochow University, Suzhou 215123, China}
 \address[china2]{Collaborative Innovation Center of Radiological Medicine of Jiangsu Higher Education Institutions, Suzhou 215123, China}
 
@@ -162,17 +162,43 @@ and \   \lambda_i=x_i-\bar{x}\\
 \end{split}
 \end{equation}
 
+\begin{equation}\label{eq:gatti}
+\begin{split}
+PRF_{gatti}(\lambda)
+& = \frac{K_{1}}{K_{2}\sqrt{K_{3}}}\bigl[arctan(\sqrt{K_{3}}tanh\bigl[K_{2}\bigl(\frac{x}{h}+\frac{w}{2h}\bigr)\bigr]) \\
+& - arctan(\sqrt{K_{3}}tanh\bigl[K_{2}\bigl(\frac{x}{h}-\frac{w}{2h}\bigr)\bigr])\bigr] \\
+& K_{1} = \frac{K_{2}\sqrt{K_3}}{4 atan(\sqrt{K_3})}\\
+& K_2 = \frac{\pi}{2}\left(1-\frac{\sqrt{K_{3}}}{2}\right)\\
+\end{split}
+\end{equation}
+
+\begin{equation}\label{eq:gaus}
+PRF_{gaus}(\lambda) = .5\left[erf\left(\frac{x+\frac{w}{2}}{\sqrt{2}\sigma}\right) - erf\left(\frac{x-\frac{w}{2}}{\sqrt{2}\sigma}\right) \right]
+\end{equation}
+
 For the purpose of calculating the effective PRF from experimental data, we select only the pads that are not saturated. In the full TPC analysis we cluster by layer or by row depending on the angle the track makes with respect to the wire. For the following we only illustrate the layer clustering case but clustering by row follows the exact procedure with a different PRF. 
 
 The way we calculate the PRF is given by equation \ref{eq:1} where i is the index over the pads and Q is the total charge within the layer. Figure \ref{fig:av}  illustrates the estimate for the avalanche position along the wire given by, the mean position $\bar{x}$. Also seen is $\lambda_i$, defined as the difference in position of the center of the $i^{th}$ pad, $x_i$, to the mean position $\bar{x}$. 
 
+
 \begin{figure}[H]
-\includegraphics[width=\linewidth]{expprf}
+\begin{overpic}[grid,width=\linewidth]{expprf}
+\put(65,55){\contour{white}{\fontsize{5}{6}$\frac{K_{1}}{K_{2}\sqrt{K_{3}}} arctan(\sqrt{K_{3}}tanh\left[(K_{2}(\frac{x}{h}+\frac{w}{2h})\right]) - arctan(\sqrt{K_{3}}tanh\left[(K_{2}(\frac{x}{h}-\frac{w}{2h})\right])$  }}
+\put(65,45){\contour{white}{    }}
+\end{overpic}
 \caption{Experimental pad response function. Constructed from total number of pads $>$=3. }
 \label{fig:expprf}
 \end{figure}
+
+
+%\begin{figure}[H]
+%\includegraphics[width=\linewidth]{expprf}
+%\caption{Experimental pad response function. Constructed from total number of pads $>$=3. }
+%\label{fig:expprf}
+%\end{figure}
+
 The resulting experimental PRF for the S$\pi$RIT TPC is shown in figure \ref{fig:expprf}.This well-behaved function is obtained from averaging many events. In the following this function will be used to fit the data and correct for the saturated pads. 
-\paragraph{Method of Desaturaiton}
+\paragraph{Method of Desaturation}
 
 We will use the term ``desaturation" for our process of estimating and correcting the charge values of the saturated pads. Figure \ref{fig:satpad} shows a typical situation of saturated signals. When an avalanche causes a large induced signal, the pads directly underneath collect the largest charge and may become saturated. We label these charges $q_{2'}$ and $q_{3'}$ as indicated in figure \ref{fig:satpad}. The pads further away would experience smaller, non-saturated signals shown as $q_{1}$ and $q_{4}$.
 
