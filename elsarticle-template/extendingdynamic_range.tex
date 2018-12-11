@@ -100,7 +100,7 @@
 
 \begin{abstract}
 
-As Time Projection Chambers (TPCs) become widely used in low to intermediate heavy ion collisions, of around 300 MeVA, the mass and momentum range covered by the resulting particles cover a wide dynamic range. Many TPCs currently only have a single gain output with a fixed dynamic range. In a recent set of experiments using the SAMURAI Pion-Reconstruction and Ion-Tracker (S$\pi$RIT) TPC, it was important to simultaneously measure relativistic pions and heavy ion tracks from the same collisions. As a tracks energy loss is collected and multiplied by the anode wires, the charge is spread out onto a distribution on the TPC read out pads. If the avalanche on a wire is high enough, the charge collected on a pad will saturate the electronics, though only for pads directly underneath the avalanche; pads further away in the distribution will not be saturated. Using these unsaturated pads and the known distribution function, we recover the saturated pads, increasing the dynamic range by a factor of 10.
+When Time Projection Chambers (TPCs) are used in low to intermediate nuclear collisions, the mass and momentum range covered by the emitted particles cover a wide range in energy losses. Many TPC readout electronics currently only have a single gain output with a fixed dynamic range. In a recent set of experiments using the SAMURAI Pion-Reconstruction and Ion-Tracker (S$\pi$RIT) TPC, it was important to simultaneously measure relativistic pions and heavy ion tracks from the same collisions. As a tracks energy loss is collected and multiplied by the anode wires, a distribution of image charges are induced on the TPC read out pads. If the avalanche on a wire is large enough, the charge collected on a pad will saturate the electronics, though only for pads directly underneath the avalanche; pads further away in the distribution will not be saturated. Using these unsaturated pads and the known distribution function, we can estimate the saturated pads, increasing the dynamic range by a factor of 10.
 
 \end{abstract}
 
@@ -114,7 +114,7 @@ As Time Projection Chambers (TPCs) become widely used in low to intermediate hea
 \linenumbers
 
 \section{Introduction} 
- The particles resulting from low to intermediate energy heavy ion collisions cover a large range in energy losses from very small energy losses, for minimum ionizing particles, to much higher energy losses, for slower moving, heavy fragments. Figure \ref{fig:intro} shows the range of momenta typically observed in intermediate energy collisions, around 300 MeVA, and the energy loss range involved.  
+ Charged particles emitted in low to intermediate energy nuclear collisions cover a large range in energy losses from very small energy losses, for minimum ionizing particles, to much higher energy losses, for slower moving, heavy fragments. Figure \ref{fig:intro} shows the range of momenta typically observed in intermediate energy collisions, around 300 MeVA, and the energy loss range involved.  
  
   Measuring the full range in energy losses have motivated the development of large dynamic range electronics, which are able to switch between high and low gains covering a very large dynamic range; however, many current Time Projection Chambers (TPCs) readout electronics have a single gain output, presenting a problem for the readout of such devices.
  
@@ -144,77 +144,140 @@ We begin our discussion by describing some basic properties of the SAMURAI Pion 
 \end{figure}
 
 \paragraph{Pad plane} 
-The S$\pi$RIT TPC pad plane consists of a 2-dimensional plane of rectangular charge sensitive pads with an x dimension of of 8 mm wide, and a z dimension of 12 mm. These pads are laid out on a grid measuring 112 by 108 pads with a total area of 1344 mm x 864 mm.
+The S$\pi$RIT TPC pad plane is composed of a rectangular charge sensitive pads, each with an x dimension of of 8 mm wide, and a z dimension of 12 mm. These pads are arranged in a grid measuring 112 by 108 pads with a total area of 1344 mm x 864 mm.
 
 \paragraph{Wire planes}
-Illustrated in Figure \ref{fig:padwire}, the S$\pi$RIT TPC consists of three wire planes below the pad plane, with wires aligned along the x-axis. The first wire plane operates as an ion-gate or gating grid; the second wire plane is held at ground, with both wire planes serving to isolate the drift volume from the gas amplification stage. 
+As illustrated in Figure \ref{fig:padwire}, the S$\pi$RIT TPC consists of three wire planes below the pad plane, with the wires aligned along the x-axis. The wire plane farthest from the pad plane (14 mm) operates as an ion-gate or a gating grid \cite{suwat}. The middle wire plane (8 mm) is grounded. When the gating grid is open, electrons ionized by reaction products in the drift volume drift through both the gating grid and ground planes. 
 
-Closest to the pad plane is the high voltage, anode wire plane, consisting of 20 $\mu$m diameter wires spaced 4 mm apart, and set at a height of 4 mm from the pad plane. Near the vicinity of these wires an avalanche occurs multiplying the secondary electrons drifting up from the drift volume, created from the track's energy loss in the detector gas. When these secondary electrons reach the anode wires, they are multiplied on the order of 1000 times creating electron and ion pairs. It is the motion of these slow moving ions, drifting away from the anode wires, that induce images charges on the read out pads above. The distribution of image charges on the pad plane is fixed by the geometry of the anode wire grid, and its distance from the pad plane. 
+Closest to the pad plane is the high voltage, anode wire plane (4 mm), consisting of 20 $\mu$m diameter wires spaced 4 mm apart. In the vicinity of these wires an avalanche occurs multiplying the secondary electrons drifting up from the drift volume, created from the track's energy loss in the detector gas. When these secondary electrons reach the anode wires, they are amplified on the order of 1000 times creating electron and ion pairs. It is the motion of these slow moving ions, as they drift away from the anode wires, that induces image charges on the read out pads above. The distribution of image charged on the pad plane is centered about the avalanche region on the wires and its width is fixed by the distance from the pad plane. 
 
-The anode wires are sectioned off into 14 independent sections, each containing 26 wires; 12 sections were biased to 1460 V. This setting was optimized to ensure m.i.p. particles such as pions would at have a signal to noise ratio of around 20:1. The two remaining sections were biased to 1214 V due to high current issues, reducing the gas gain by a factor of 10 times as compared to the other anode sections. Lowering the anode wires effectively extended the dynamic range, though unnecessary for the following method to be discussed, and allowed for a direct validation of the method's success. 
+The anode wires are sectioned off into 14 independent sections, each containing 26 wires; 12 sections were biased to 1460 V. This setting was optimized to ensure m.i.p. particles such as pions would have a signal to noise ratio of around 20:1. The two remaining sections were biased to 1214 V due to high current issues, reducing the gas gain by a factor of 10 times as compared to the other anode sections. As demonstrated by the EoS TPC \citep{eos}, lowering the anode wires effectively extended the dynamic range.  This gain reduction allowed for a direct validation of the success of the new method for extending the dynamic range presented here. 
 
 \paragraph{Generic Electronics for TPCs}
-Signals in the S$\pi$RIT TPC are amplified and digitized by the recently developed Generic Electronics for TPCs (GET) \cite{get}.  Short cables transmit the signals from the pads to the inputs of the AGET chips. Each AGET chip services 64 pads (63 pads are connected in our case), contains a pre-amplifier, and a Switched Capacitor Array (SCA), with a maximum of 512 time buckets sampling at 1 to 100 MHz. Four AGET chips are mounted on one AsAd (ASIC and ADC) motherboard. The gain of each AGET can be configured as 0.12, 0.24, 1.0, or 10 pC over the whole dynamic range, and the ADCs on each AsAd board provides 12 bit resolution. The peaking times of the shaping amplifiers can be set to 69, 117, 232, 501, 720, or 1014 ns. In this experiment, the gain was set to the highest setting, 0.12 pC, the peaking time 117 ns, and the width of the time bucket was 40 ns. The Aget 2.0, asad 2.1, and cobo 1.0 firmware versions were used. The variations in the electronics were calibrated by measuring the response of each channel to a injected reference pulse, covering the full dynamic range of each channel. 
+Signals in the S$\pi$RIT TPC are amplified and digitized by the recently developed Generic Electronics for TPCs (GET) \cite{get}.  Short cables transmit the signals from the pads to the inputs of the AGET chips. Each AGET chip services 64 pads (63 pads are connected in our case), contains a pre-amplifier, and a Switched Capacitor Array (SCA), with a maximum of 512 time buckets with an adjustable sampling frequency of 1 to 100 MHz. Four AGET chips are mounted on one AsAd (ASIC and ADC) motherboard. The gain of each AGET can be configured as 0.12, 0.24, 1.0, or 10 pC over the whole dynamic range, and the ADCs on each AsAd board provides 12 bit resolution. The peaking times of the shaping amplifiers can be set to 69, 117, 232, 501, 720, or 1014 ns. In this experiment, the gain was set to the highest setting, 0.12 pC, the peaking time 117 ns, and the sampling frequency 25 MHz (resulting in 40 ns time buckets). The Aget 2.0, asad 2.1, and cobo 1.0 firmware versions were used. The variations in the electronics were calibrated by measuring the response of each channel to a injected reference pulse, covering the full dynamic range of each channel. 
+
+\paragraph{Analysis Software}
+The S$\pi$RITROOT software is modular tasked based code based on FAIRROOT package written in C++. The tasks in the S$\pi$RITROOT software reconstruction are:
+\begin{itemize}
+  \item Decoder task
+  \item Pulse Shape Algorithm (PSA Task)
+  \item Helix Track Finding Algorithm
+  \item Clustering Algorithm
+  \item Track Fitting (GENFIT package)
+  \item Vertex Fitting (RAVE package)
+\end{itemize}
+
+The decoder task converts the binary data file into a container class which maps the electronics channels into the corresponding pads and (x,z) coordinates. 
+
+There may be several pulses in a pad coming from two tracks passing under the same pad separated  by arrival time. Using an expected pulse shape the PSA task fits these pulses within a pad, giving the arrival time of the drifted electrons from that track. The height of the pulse is proportional to the total charge of that event, Q. The y-coordinate is calculated as $y = v\cdot t_0$ where $v$ is the drift velocity and $t_0$ the arrival time of the pulse. Combining all the information from these first two tasks, (x,y,z,Q), we construct what is called a "hit". 
+
+ The Helix Track Finding Algorithm finds the collection of hits belonging to one track out of all the hits in an event. Hits within a track are then reduced into clusters. A cluster's position is the average position of the hits within a cluster, with the total charge of the cluster being the sum of the hits' charges. A clusters average position represents an estimate of the track's position. 
+ 
+ The clusters are then fitted in the GENFIT track fitting package \cite{genfit}, giving the final momentum. A final vertex is fitted from the tracks using the package RAVE \cite{rave}. 
+
+
+\paragraph{Definition of clustering}
+
+A brief description of the method of clustering is illustrated in Figure \ref{fig:topview}. It is impractical to cluster in both x and z-axis and we choose to only cluster the hits along one axis. The clustering direction depends on the angle the track makes with respects to the x-axis, defined as $\theta$. For a track going along the z-axis the crossing angle is defined as $90^{\circ}$, and a track going along the x-axis defined as $0^{\circ}$. In the case that the crossing angle is $45^{\circ} < \theta \leq 90^{\circ} $ the clustering direction is along the x-axis. For $0^{\circ} < \theta \leq 45^{\circ}$ it is along the z-axis. 
+
+The three clusters at the bottom of Figure \ref{fig:topview} are clustered along the x-axis and the upper three are along the z-axis, shown by the bolded pads for one of the clusters. The position along the clustering direction is a weighted mean; calculated by weighting the individual hit's positions by their charges $q_i$. The other direction is set to the center of the pad. For example if we are clustering along the x-axis for a cluster, the z-position is set to the center of the pad in the z-direction and vice versa. 
+
+Clustering in this way gives us better position resolution for calculating the position of each cluster. You could imagine if we calculated the clusters only along the x-axis for tracks with $\theta ~ 0^{\circ}$ the x-position is not well defined. Thus by switching to the direction most perpendicular to the track we get a better position resolution.
 
 \begin{figure}[H]
-\includegraphics[width=\linewidth]{defofavalanche}
-\caption{Cartoon graphic of avalanche event on an anode wire over one layer of pads. The estimate of the position of the avalanche is given by $\bar{x}$  the mean. The position from the center to each pad to the $\bar{x}$ position is given as $\lambda_i$.}
-\label{fig:av}
+\includegraphics[scale=.5]{top_view_helix_ext.pdf}
+\caption{Cartoon graphic of a top down view of a fit to a track passing through several pads. The bolded pads and the charges $q_i$ represent the hits belonging to that pad and the clusters of the track representing the average position of the track. The three clusters at the bottom are clustered in the x-direction and for the upper three clustered in the z-direction. The estimate of the position of the avalanche is given by the track fit and the position from the center to each pad to the $\bar{x}$ position is given as $\lambda_i$.}
+\label{fig:topview}
 \end{figure}
 
-\begin{equation}\label{eq:1}
-\begin{split}
-PRF(\lambda_i) 
-& = \frac{q_i(\lambda_i)}{Q} \\
-& Q=\sum_i q_i \\
-& \bar{x}= \frac{\sum_i x_i q_i}{Q}\\
-& \lambda_i=x_i-\bar{x} \\
-\end{split}
-\end{equation}
+\begin{figure}[H]
+\includegraphics[width=\linewidth]{padsat_Large}
+\caption{A cartoon illustration of the charge distribution resulting from an electron avalanche on one wire and the projections of the distribution onto the two axis $\rho(x)$ onto the x-axis and $\rho(z)$ onto the z-axis. The orientation of the wire planes is flipped upside down to display the perspective better.}
+\label{fig:prf}
+\end{figure}
+
+\section{Pad Response Function}
+As illustrated in Figure \ref{fig:prf} the distribution resulting from an electron avalanche is 2-dimensional, with the charge observed on each pad being the integral of that distribution over the pad's dimension; also called the Pad Response Function (PRF). The projection onto the x and z-axis of this distribution is shown as $\rho(x)$ and $\rho(z)$. 
+
+For this particular case the clustering direction would be along the x-axis and is illustrated by the bolded pads; representing the hits resulting from the avalanche. By choosing to clustering only in one direction, we have not included the charge in pads adjacent in the z-axis. While the charge resulting from the tails of $\rho(z)$ is small our clustering choice has introduced small correlations in charge between neighboring pads.
+
+\paragraph{Gatti distribution}
+Gatti \cite{gatti} expressed a semi-empirical equation for the charge distribution in a simple multi-wire TPC such as that found in the S$\pi$RIT TPC. Given in Eq. \ref{eq:gatti}, the function depends only on the width of a pad (w), height of the anode plane to the pad plane (h), and the distance of the pad center to the avalanche point $\lambda$. It is a single parameter equation where the two parameters $K_1 = \frac{K_{2}\sqrt{K_3}}{4 atan(\sqrt{K_3})}$ and $K_2 = \frac{\pi}{2}\left(1-\frac{\sqrt{K_{3}}}{2}\right)$ depend on the parameter $K_3$, which is a function of the ratio of the anode wire diameter to the height of the anode wires to the pad plane. $K_3$ can be looked up in a graph in \cite{blumrol} and \citep{gatti}.
 
 \begin{equation}\label{eq:gatti}
 \begin{split}
 PRF_{gatti}(\lambda)
 & = \frac{K_{1}}{K_{2}\sqrt{K_{3}}}\bigl[arctan(\sqrt{K_{3}}tanh\bigl[K_{2}\bigl(\frac{\lambda}{h}+\frac{w}{2h}\bigr)\bigr]) \\
 & - arctan(\sqrt{K_{3}}tanh\bigl[K_{2}\bigl(\frac{\lambda}{h}-\frac{w}{2h}\bigr)\bigr])\bigr] \\
-& K_3 = .48\\
-& K_2 = \frac{\pi}{2}\left(1-\frac{\sqrt{K_{3}}}{2}\right)\\
-& K_1 = \frac{K_{2}\sqrt{K_3}}{4 atan(\sqrt{K_3})}\\
 \end{split}
 \end{equation}
 
-\begin{equation}\label{eq:gaus}
-PRF_{gaus}(\lambda) = .5\left[erf\left(\frac{\lambda+\frac{w}{2}}{\sqrt{2}\sigma}\right) - erf\left(\frac{\lambda-\frac{w}{2}}{\sqrt{2}\sigma}\right) \right]
-\end{equation}
-
-
-\section{Pad Response Function}
 \paragraph{Experimental PRF}
 
+The correlations we introduced by only clustering along one direction do no play a significant role in the particle identification, but cause deviations from the expected Gatti distribution. Also, analytic PRFs only exist for classical multi-wire TPCs. For these reasons it is useful then to experimentally measure the PRF and fit it with some empirical function, typically a Gaussian, to describe its behavior. 
 
+As shown in Figure \ref{fig:topview}, we postulate that the PRF is only a function of the total charge deposited in a cluster $Q = \sum_i q_i$ and the difference in position of the center of the $i^{th}$ pad, $x_i$, to the mean position $\bar{x} = \sum_i x_i q_i/Q$, called $\lambda_i = x_i-\bar{x}$. The PRF is simply defined as the charge fraction of each pad as a function of $\lambda$, Equation \ref{eq:prf}. 
 
-The distribution resulting from an electron avalanche is 2-dimensional; the charge collected on each pad being the integral of that distribution over the pad's dimensions. It is impractical to calculate the avalanche position using the full 2-dimensional distribution; instead we calculate the center of gravity of charge along the direction most perpendicular to the track, giving the best momentum resolution. For a track traversing in the z direction we would cluster along the x, and vice versa.
+\begin{equation}\label{eq:prf}
+PRF(\lambda_i) = \frac{q_i(\lambda_i)}{Q}
+\end{equation}
 
- A semi-empirical equation, for both x and z directions of a simple multi-wire TPC, is given by Gatti \cite{gatti}, and also summarized in \cite{blumrol}. The integral of the charge distribution, over one pad, is referred to as the Pad Response Function (PRF); given for the Gatti distribution by equation \ref{eq:gatti} in \cite{blumrol}. The overlap of of the PRFs of adjacent wires and diffusion of the primary electrons correlate the charge observed causing deviations from the expected Gatti PRF, also analytic PRFs only exist for classical multi-wire TPCs; in these cases an effective PRF may be calculated from experimental data. An effective PRF is calculated and used here in the following. 
+Averaging over many events, the resulting experimental PRF for the S$\pi$RIT TPC is shown in figure \ref{fig:expprf}. Here we see the deviations from the expected analytic Gatti distribution vs fitting with a Gaussian function with two parameters, $N_0$ and $\sigma$ given in \ref{eq:gaus}.
 
-We postulate that the PRF is only a function of the total charge deposited on the wire Q and the displacement $\lambda$; the difference in position of the center of the $i^{th}$ pad, $x_i$, to the mean position $\bar{x}$, given by equation \ref{eq:1} and illustrated in Figure \ref{fig:av}. Averaging over many events, the resulting experimental PRF for the S$\pi$RIT TPC is shown in figure \ref{fig:expprf}. A Gaussian function, equation \ref{eq:gaus}, was used to fit to the experimental PRF; the agreement with the data is better than with the Gatti distribution. 
+\begin{equation}\label{eq:gaus}
+PRF_{gaus}(\lambda) = N_0 e^\frac{-\lambda^2}{2\sigma^2}
+\end{equation}
 
 \begin{figure}[H]
 \begin{overpic}[width=\linewidth]{expprf}
 \put(61,55){\contour{white}{ PRF${}_{gaus}(\lambda)$ eq. \ref{eq:gaus}  }}
 \put(61,49){\contour{white}{ PRF${}_{gatti}(\lambda)$ eq. \ref{eq:gatti} }}
 \end{overpic}
-\caption{Experimental pad response function. Constructed from total number of pads $>$=3. }
+\caption{Experimental pad response function of many events for a crossing angle of $85^{\circ} < \theta \leq 90^{\circ}$.  }
 \label{fig:expprf}
 \end{figure}
 
+\section{PRF vs crossing angle}
+As mentioned in \citep{gatti}, the shape of the PRF depends on the crossing angle. Plotted in Figure \ref{fig:prfangle} is the PRF of a $\pi^-$ tracks vs the crossing angle $\theta$. One can see the PRF gets wider and wider going from  $90^{\circ}$ to $45^{\circ}$. This is easily understood as as the portion of a track crossing at $90^{\circ}$ is at the best position resolution; the PRF gets wider and wider until the PRF at $0^{\circ}$ is flat and the position resolution is at it's worst. Since we switch at $45^{\circ}$ the clustering direction the opposite trend is seen and the best position resolution is at $0^{\circ}$ as the PRF becomes narrower. 
 
-%\begin{figure}[H]
-%\includegraphics[width=\linewidth]{expprf}
-%\caption{Experimental pad response function. Constructed from total number of pads $>$=3. }
-%\label{fig:expprf}
-%\end{figure}
+\begin{figure}[H]
+\includegraphics[width=\linewidth]{PRF_vsAngle}
+\caption{Experimental pad response function as a function of the crossing angle $\theta$ }
+\label{fig:prfangle}
+\end{figure}
 
+
+\begin{figure}[H]
+\begin{overpic}[width=\linewidth]{normsigma}
+\end{overpic}
+\caption{Parameters $N_{0}$ and $\sigma$ as a function of the crossing angle $\theta$ with the $4^{th}$ order polynomial fits given in Table \ref{tb:coeff}. }
+\label{fig:normsigma}
+\end{figure}
+
+\begin{table}
+\centering
+ \begin{tabular}{||c c c c c c||} 
+ \hline
+ Coefficient & $c_0$ & $c_1$ & $c_2$ & $c_3$ & $c_4$ \\ [0.5ex] 
+ \hline\hline
+ $0 < \theta < 45$ & & & & &  \\ [.25ex]
+ \hline
+ $N_0$ & .897 & 5.766E-3 & -4.263E-4 & 7.444E-6 & 5.705E-8 \\ 
+ \hline
+ $\sigma$ & 5.496 & -3.920E-2 & 2.693E-3 & -5.208E-5 & 5.334E-7\\
+ \hline
+ $45 < \theta < 90$ & & & &  & \\ [.25ex]
+ \hline	
+ $N_0$ & 1.220 & -6.258E-2 & 1.608E-3 & -1.492E-5  & 4.654E-8 \\
+ \hline
+ $\sigma$ & 31.368 & -1.109 & 1.779E-2 & -1.336E-4 & 3.940E-7\\
+ \hline
+\end{tabular}
+\caption{Coefficients of the $4_th$ order polynomial fit to the Gaussian parameters $N_0$ and $\sigma$. The polynomial form is given as $c_0 + c_1 x + c_2 x^2 + c_3 x^3 + c_4 x^4$}
+\label{tb:coeff}
+\end{table}
+ 
+The Gaussian PRF fitted to the experimental data only has two parameters the normal coefficient and the width, sigma; the mean value is assumed to be 0. Fit's were performed to the experimental data by binning $5^{\circ}$ from $0^{\circ} < \theta \leq 90^{\circ}$ and fitting the PRFs. The two variables are plotted vs. $\theta$ in Figure \ref{fig:normsigma} a $4^{th}$ order polynomial fit between these points allow for $\theta$ values between points. 
 
 \paragraph{Method of Desaturation}
 Figure \ref{fig:satpad} shows a typical situation of saturated signals. When an avalanche causes a large induced signal, the pad directly underneath collects the largest charge becoming saturated, pads further away experience smaller, non saturating charges; $q_{2'}$, $q_{3'}$ and  $q_{1}$, $q_{4}$ respectively as indicated in figure \ref{fig:satpad}. 
@@ -227,7 +290,7 @@ The charge deposited on each pad, though saturated, must satisfy the PRF distrib
 
 \begin{figure}[H]
 \includegraphics[width=\linewidth]{saturated_pads}
-\caption{•}
+\caption{A typical case of a saturating event. The pads directly underneath the avalanche point,$q_{2'}$ and $q_{3'}$, are saturated while pads farther away, $q_1$ and $q_4$ are not saturated.}
 \label{fig:satpad}
 \end{figure}
 
