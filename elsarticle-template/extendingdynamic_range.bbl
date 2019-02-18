@@ -11,11 +11,47 @@ G.~R. et. al., A tpc detector for the study of high multiplicity heavy ion
 \newblock \href {http://dx.doi.org/10.1109/23.106592}
   {\path{doi:10.1109/23.106592}}.
 
+\bibitem{shane}
+R.~S. et. al., S$\pi$rit: A time-projection chamber for symmetry-energy
+  studies, NIM A 784 (2015) 513--517.
+\newblock \href {http://dx.doi.org/10.1016/j.nima.2015.01.026}
+  {\path{doi:10.1016/j.nima.2015.01.026}}.
+
+\bibitem{suwat}
+S.~et. al., A gating grid driver for time projection chambers, Nucl. Instr.
+  Meth. Phys. Res. A 853 (2017) 44--52.
+\newblock \href {http://dx.doi.org/10.1016/j.nima.2017.02.001}
+  {\path{doi:10.1016/j.nima.2017.02.001}}.
+
 \bibitem{get}
 E.~P. et. al., Get: A generic and comprehensive electronics system for nuclear
   physics experiments, Physics Procedia 37 (2012) 1799--1804.
 \newblock \href {http://dx.doi.org/10.1016/j.phpro.2012.02.506}
   {\path{doi:10.1016/j.phpro.2012.02.506}}.
+
+\bibitem{fairroot}
+M.~A.-T. et. al., The fairroot framework, J. Phys.: Conf. Ser. 396~(2).
+\newblock \href {http://dx.doi.org/10.1088/1742-6596/396/2/022001}
+  {\path{doi:10.1088/1742-6596/396/2/022001}}.
+
+\bibitem{genfit}
+C.~H. et. al., A novel generic framework for track fitting in complex detector
+  systems, Nucl. Instrum. Meth. A 620~(2-3) (2010) 518--525.
+\newblock \href {http://dx.doi.org/10.1016/j.nima.2010.03.136}
+  {\path{doi:10.1016/j.nima.2010.03.136}}.
+
+\bibitem{rave}
+W.~Waltenberger, Rave—a detector-independent toolkit to reconstruct vertices,
+  IEEE Transactions on Nuclear Science 58~(2) (2011) 434--444.
+\newblock \href {http://dx.doi.org/10.1109/TNS.2011.2119492}
+  {\path{doi:10.1109/TNS.2011.2119492}}.
+
+\bibitem{gatti}
+E.~G. et. al., Optimum geometry for strip cathodes or grids in mwpc for
+  avalanche localization along the anode wires, Nucl. Instr. Meth. Phys. Res. A
+  163 (1979) 83--92.
+\newblock \href {http://dx.doi.org/10.1016/0029-554X(79)90035-1}
+  {\path{doi:10.1016/0029-554X(79)90035-1}}.
 
 \bibitem{blumrol}
 W.~Blum, W.~Riegler, L.~Rolandi, Particle Detection with Drift Chambers,
