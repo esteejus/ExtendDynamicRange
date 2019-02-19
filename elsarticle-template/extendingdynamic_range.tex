@@ -115,19 +115,22 @@ When Time Projection Chambers (TPCs) are used in low to intermediate heavy ion c
 \linenumbers
 
 \section{Introduction} 
- Charged particles emitted in low to intermediate energy nuclear collisions cover a large range in energy losses from very small energy losses, for minimum ionizing particles, to much higher energy losses, for slower moving, heavy fragments. Figure \ref{fig:intro} shows the range of momenta typically observed in intermediate energy collisions, around 300 MeVA, and the energy loss range involved.  
- 
-  Measuring the full range in energy losses have motivated the development of large dynamic range electronics, which are able to switch between high and low gains covering a very large dynamic range; however, many current Time Projection Chambers (TPCs) readout electronics have a single gain output, presenting a problem for the readout of such devices.
- 
- Several techniques have been employed to increase the dynamic range for energy losses in TPCs. One solution is to lower the electronics gain or the avalanche gas gain in certain regions of the TPC, increasing the dynamic range. In the EOS TPC \cite{eos}, a larger dynamic range was achieved by lowering the voltage on selected anode wires, decreasing the gas amplification on those wires while in the prototype Active Target TPC (PAT-TPC) and AT-TPC an equivalent reduction in gain was achieved by lowering the electronics gain for some of the readout channels.  By dedicating regions of lower gain in the TPC one is able to measure more strongly ionizing particles, but for these regions of lower gain the weakly ionizing particle's signals are to small to be measured and we lose information for determining the momentum. 
- 
- The need to measure the full range in energy losses has motivated the development of large dynamic range electronics, which are able to switch between high and low gains [Pollacco, private communications] covering a very large dynamic range. However, many current TPCs have a single fixed gain output, presenting a problem for the analysis of data taken with the readout of such devices.
 
- These strategies have drawbacks in applications where the experiment's requirements cannot accept the associated degradation in the dE/dx resolution, or the momentum resolution. Finding the solution to this problem has motivated the development of software based analysis that will extend the dynamical range of TPCs; we illustrate an alternate approach to expand the dynamic range within the context of a standard multi-wire TPC, without the need of extra hardware or dedicating regions of lower gain. 
- 
- Many TPC readout electronics have a single gain output with a dynamic range (defined the ratio of the maximum signal to the electronic noise) of no more than 1000:1. In our case the maximum signal to noise was about 700:1. We required the smallest signal of minimum ionizing particles (m.i.p.) to be 30:1, setting the dynamic range to be 23 times m.i.p. Figure \ref{fig:intro} illustrates the range in momentum we expect to see saturation effects. The shaded region shows where 23 times that of the minimum ionizing pion signal where we could expect saturation to occur. While the pion's momentum range can fully be measured, without saturation effects, heavier particles would be harder to resolve in dE/dx at lower momentum.
+As charged particles resulting from a heavy ion collision (HIC) pass through a Time Projection Chamber (TPC), they ionize the gas inside of the drift region of the chamber. These electrons drift under influence of the electric and magnetic fields in the to the avalanche region where they are multiplied in the presence of the high electric fields of wire, GEM, or Mircromega structures. Image currents induced in nearby pad electrodes are read out into electronics to obtain the trajectories and stopping powers, <dE/dx>, of the charged particles traversing the TPC.
 
- 
+In high energy  HIC, most of these particles have charges of $\pm$e and stopping powers which span a relatively narrow range; the dynamical range of TPC readout electronics typically reflects this narrow range of stopping powers. Challenges emerge when applying TPCs to low or intermediate energy HIC where stopping powers range from the very small values for minimum ionizing particles to the much higher stopping powers of slower moving, heavy fragments. 
+
+Figure \ref{fig:intro} shows some of the stopping powers of light particles with Z=1-3 typically measured in ${}^{132}$Sn+${}^{124}$Sn collisions at an intermediate incident energy of E/A=270 MeV by the SAMURAI Pion Reconstruction and Ion-Tracker (S$\pi$RIT) TPC, \cite{shane}. Here the red lines in the figure are the predicted energy loss, the most probable dE/dx, as a function of rigidity P/q, generated from Geant4 simulations. 
+
+The dynamic range expected from TPC electronics is on the order of 1000:1 signal to noise ratio for the maximum signal. The position measurement of a track comes from fitting the induced charge distribution on several pads. As an example the middle pad has the largest signal  the small pads adjacent to it need to have at least a signal to noise ratio of 6:1. If they hold  10\% of the charge each then the largest signal, holding 80\% of the charge, has a signal to noise of around 50:1. 
+
+ Therefore the maximum signal in a TPC is roughly 20 times that of a minimum ionizing particle's signal. The blue dashed lines in Figure \ref{fig:intro}, located at the top and bottom of the vertical blue bar, are separated by a factor of 20, representing the typical effective dynamic range in a TPC. 
+
+This dynamic range estimate should be regarded as approximate because the energy loss fulcuates significantly from the mean value predicted from the most probable energy loss as described in Bichsel \cite{bichsel}. Nevertheless, the blue dashed lines and vertical blue bar illustrate the range of energy losses that any fixed gain readout system can sample is limited; one can change the gain and shift the energy loss range that can be sampled, but not increase the range of it. 
+
+
+The hyperbolic increase in the stopping powers at low momentum illustrates the degree to which the range of stopping powers can exceed the electronics effective dynamic range and highlights the problems encountered in studies of intermediate energy collisions, in which light particles are abundantly produced with low momenta and more highly charged particles are emitted as well. Similar problems are encountered when TPCs are used as active targets in direct reaction studies with rare isotope beams \cite{pattpc} [CITE ANOTHER ARTICLE??? BILL???]. 
+
  
 \begin{figure}[H]
 \includegraphics[width=\linewidth]{intrographic}
@@ -135,14 +138,19 @@ When Time Projection Chambers (TPCs) are used in low to intermediate heavy ion c
 \label{fig:intro}
 \end{figure}
 
-\paragraph{1.1 TPC Overview}
-We begin our discussion by describing some basic properties of the SAMURAI Pion Reconstruction and Ion-Tracker (S$\pi$RIT) TPC \citep{shane}. It is a rectangular TPC with 12,096 pads designed to constrain the density dependence of the nuclear symmetry energy at densities on the order of twice saturation density. In order to study central collisions of Sn isotopes at around 300 AMeV, the TPC was designed to identify isotopes up to Z=3 with the ability to detect low ionizing particles such as pions. 
+Several techniques have been employed to increase the range in energy losses obsevable. One common technique has has been to lower the effective gain of selected sense pads in the readout plane. This can be done be lowering the gain of the readout readout electronics in that channel or by changing the gas amplification at the readout plane. In the EOS TPC \cite{eos} this was done by decreasing the voltages in select anode wires in the multi-wire readout. With the prototype Active Target Time Projection Chamber lowering or increasing the gain was achieved by decreasing or increasing the electric fields on selected pads within a Micromegas \cite{pattpc}. The results of changing the gas-gain vs. the electronic gain are rather similar; reducing the gain to obtain the dynamic range indicted by the dashed-dotted magenta lines, making the TPC effectively blind to minimum ionizing particles in the regions of lower gain. 
 
- For the following discussion we have defined the +x axis to point to the left of the beam, the -y axis to point down into the drift volume, and the +z axis to point along the beam. 
+While future developments in TPC electronics may ultimately provide means to significantly improve the dynamic range of TPC electronics, it is useful to consider whether software strategies can be developed that can compensate for these dynamic range limitations of existing devices. In this paper, we illustrate one approach to expand the dynamic range within the context of a standard multi-wire TPC, without the need of extra hardware or dedicating regions of lower lower gain.
+
+
+\paragraph{1.1 TPC Overview}
+We begin our discussion by describing some basic properties of the SAMURAI Pion Reconstruction and Ion-Tracker (S$\pi$RIT) TPC \citep{shane}. It is a rectangular TPC with 12,096 pads designed to constrain the density dependence of the nuclear symmetry energy at densities on the order of twice saturation density. In order to study central collisions of Sn isotopes at 270 AMeV, the TPC was designed to identify isotopes from Z=1-3 with the ability to detect low ionizing particles such as pions. 
+
+For ease of illustration and discussion in this paper, we use a coordinate systems for the S$\pi$RIT TPC, that has the beam traveling along the +z direction. The negative y-axis points away from the pad plane into the drift volume. The positive x-axis pointing to the left of the beam and runs parallel to the wires. 
 
 \begin{figure}[H]
 \includegraphics[width=\linewidth]{padwire}
-\caption{Cartoon graphic showing the 3 wire planes and a section of the pad plane. h3 =14 mm, h2 = 8 mm, h1 = 4 mm, d2 = 1 mm, d1 = 4 mm. This graphic is inverted from the actual wire planes and pad plane to display the perspective easier.}
+\caption{Cartoon graphic showing the 3 wire planes and a section of the pad plane. h3 =14 mm, h2 = 8 mm, h1 = 4 mm, d2 = 1 mm, d1 = 4 mm.}
 \label{fig:padwire}
 \end{figure}
 
@@ -160,15 +168,7 @@ The anode wires are sectioned off into 14 independent sections, each containing 
 Signals in the S$\pi$RIT TPC are amplified and digitized by the recently developed Generic Electronics for TPCs (GET) \cite{get}.  Short cables transmit the signals from the pads to the inputs of the AGET chips. Each AGET chip services 64 pads (63 pads are connected in our case), contains a pre-amplifier, and a Switched Capacitor Array (SCA), with a maximum of 512 time buckets with an adjustable sampling frequency of 1 to 100 MHz. Four AGET chips are mounted on one AsAd (ASIC and ADC) motherboard. The gain of each AGET can be configured as 0.12, 0.24, 1.0, or 10 pC over the whole dynamic range, and the ADCs on each AsAd board provides 12 bit resolution. The peaking times of the shaping amplifiers can be set to 69, 117, 232, 501, 720, or 1014 ns. In this experiment, the gain was set to the highest setting, 0.12 pC, the peaking time 117 ns, and the sampling frequency 25 MHz (resulting in 40 ns time buckets). The AGET 2.0, ASAD 2.1, and COBO 1.0 firmware versions were used. The variations in the electronics were calibrated by measuring the response of each channel to an injected reference pulse, covering the full dynamic range of each channel. 
 
 \paragraph{Analysis Software}
-The S$\pi$RITROOT software is modular tasked based code based on the FAIRROOT package written in C++ \cite{fairroot}. The main tasks in the S$\pi$RITROOT software reconstruction are:
-\begin{itemize}
-  \item Decoder task
-  \item Pulse Shape Algorithm (PSA Task)
-  \item Helix Track Finding Algorithm
-  \item Clustering Algorithm
-  \item Track Fitting (Momentum determination by the GENFIT package)
-  \item Vertex Fitting (RAVE package)
-\end{itemize}
+The S$\pi$RITROOT software is modular tasked based code based on the FAIRROOT package written in C++ \cite{fairroot}. The S$\pi$RITROOT reconstruction software is constructed from several main tasks: Decoder task, Pulse Shape Algorithm (PSA), Helix Track Finding Algorithm, Clustering Algorithm, Track Fitting, and Vertex Fitting.
 
 The decoder task converts the binary data file into a container class which maps the electronics channels into the corresponding pads and (x,z) coordinates. 
 
@@ -343,65 +343,56 @@ In Figure \ref{fig:lowvshigh_raw}, the effect of saturation can be seen in the h
 \end{figure}
 
 \paragraph{Particle Identification (PID)}
-
-
+\begin{comment}
 \begin{figure}[H]
 \begin{overpic}[grid,width=\linewidth]{cocktail_combine.png}
-\put(22,15){\contour{white}{\Large p} }
-\put(27,20){\contour{white}{\Large d} }
-\put(31,25){\contour{white}{\Large t} }
-\put(30,31){\contour{white}{\large ${}^{3}$He} }
-\put(33,35){\contour{white}{\large ${}^{4}$He} }
-\put(60,26){\contour{white}{\large ${}^{6}$Li} }
-\put(60,30){\contour{white}{\large ${}^{7}$Li} }
-
-\end{overpic}
+\put(12,6){\contour{white}{\tiny p} }
+\put(16,7){\contour{white}{\tiny d} }
+\put(19,8){\contour{white}{\tiny t} }
+\put(20,9){\contour{white}{\tiny ${}^{3}$He} }
+\put(23,10){\contour{white}{\tiny ${}^{4}$He} }
+\put(23,17){\contour{white}{\tiny ${}^{6}$Li} }
+\put(28,17){\contour{white}{\tiny ${}^{7}$Li} }\end{overpic}
 \caption{Uncorrected and corrected (desaturated) cocktail data.}
-\label{fig:cocktail_raw}
+\label{fig:cocktail_combine}
 \end{figure}
+\end{comment}
 
-%\begin{figure}[H]
-%\includegraphics[width=\linewidth]{cocktail_sat.png}
-%\caption{Uncorrected cocktail data.}
-%\label{fig:cocktail_raw}
-%\end{figure}
+\begin{figure}[H]
+\includegraphics[width=\linewidth]{cocktail_combine.png}
+\caption{Uncorrected and corrected (desaturated) cocktail data.}
+\label{fig:cocktail_combine}
+\end{figure}
 
 Comparing the low to high gain sections provides a direct measurement for determining the success of the desaturation technique, but the goal would be to improve the particle identification (PID). In the following PID plots the red lines represent the most probable energy loss as given by Geant4 straggling functions. A linear calibration was performed to convert keV in Geant4 to ADC in the experiment given by $\frac{ADC}{mm} = 20. \frac{keV}{cm}$.
 
 
-There are pronounced PID lines of several particle species in both the uncorrected and corrected cocktail beam PID in figures \ref{fig:cocktail_raw} and \ref{fig:cocktail_desat}. Three ovals around a momentum of 1700 and two near 900 MeV/c/Z correspond to the three B$\rho$ settings injected into the TPC. The tails of the PID lines resulting from the particle losing its initial energy, passing through the walls and other materials outside the main detector volume; therefore lowering their initial momentum. 
+There are pronounced PID lines of several particle species in both the uncorrected and corrected cocktail beam PID in figures \ref{fig:cocktail_combine}. Three ovals around a momentum of 1700 and two near 900 MeV/c/Z correspond to the three B$\rho$ settings injected into the TPC. The tails of the PID lines resulting from the particle losing its initial energy, passing through the walls and other materials outside the main detector volume; therefore lowering their initial momentum. 
 
-The uncorrected data in Figure \ref{fig:cocktail_raw} shows the effects of saturation; the PID lines deviate from their theoretical expectations starting around 400 ADC/mm eventually reaching a plateau. After applying the desaturation technique, we see a large improvement; most notably the He and Li particles, which suffer the most from saturation. A more subtle improvement of the lighter particles, (p,d,t), can also be seen in the PID lines at lower momentum.
+The uncorrected data in Figure \ref{fig:cocktail_combine} shows the effects of saturation; the PID lines deviate from their theoretical expectations starting around 400 ADC/mm eventually reaching a plateau. After applying the desaturation technique, we see a large improvement; most notably the He and Li particles, which suffer the most from saturation. A more subtle improvement of the lighter particles, (p,d,t), can also be seen in the PID lines at lower momentum.
 
 \begin{comment}
 \begin{figure}[H]	
 \begin{overpic}[width=\linewidth]{cocktail_desat.png}
-\put(22,15){\contour{white}{\Large p} }
-\put(27,20){\contour{white}{\Large d} }
-\put(31,25){\contour{white}{\Large t} }
-\put(30,31){\contour{white}{\large ${}^{3}$He} }
-\put(34,35){\contour{white}{\large ${}^{4}$He} }
-\put(60,26){\contour{white}{\large ${}^{6}$Li} }
-\put(60,30){\contour{white}{\large ${}^{7}$Li} }
+\put(12,7){\contour{white}{\Large p} }
+\put(15,10){\contour{white}{\Large d} }
+\put(20,10){\contour{white}{\Large t} }
+\put(25,10){\contour{white}{\large ${}^{3}$He} }
+\put(29,10){\contour{white}{\large ${}^{4}$He} }
+\put(30,15){\contour{white}{\large ${}^{6}$Li} }
+\put(35,15){\contour{white}{\large ${}^{7}$Li} }
 
 \end{overpic}
 \caption{Corrected (desaturated) cocktail data.}
 \label{fig:cocktail_desat}
 \end{figure}
 \end{comment}
-
-%\begin{figure}[H]
-%\includegraphics[width=\linewidth]{cocktail_desat.png}
-%\caption{Corrected (desaturated) cocktail data.}
-%\label{fig:cocktail_desat}
-%\end{figure}
-
-
  
-Looking at the collision data, in figures $\ref{fig:data_raw}$ and $\ref{fig:data_desat}$, we also see a similar result. The collision data PID suffers from more background and inefficiencies than the cocktail beam; nevertheless we can see a similar improvement in the PID lines when comparing the uncorrected to after the desaturation has been applied. Notably the separation of particle species at lower momenta and the separation of the Li species into ${}^{6}$Li and ${}^{7}$Li, whereas there was little to no separation before. 
+Looking at the collision data, in figure $\ref{fig:data_combine}$, we also see a similar result. The collision data PID suffers from more background and inefficiencies than the cocktail beam; nevertheless we can see a similar improvement in the PID lines when comparing the uncorrected to after the desaturation has been applied. Notably the separation of particle species at lower momenta and the separation of the Li species into ${}^{6}$Li and ${}^{7}$Li, whereas there was little to no separation before. 
 
+\begin{comment}
 \begin{figure}[H]	
-\begin{overpic}[width=\linewidth]{data_combine.png}
+\begin{overpic}[grid,width=\linewidth]{data_combine.png}
 \put(22,15){\contour{white}{\Large p} }
 \put(27,20){\contour{white}{\Large d} }
 \put(31,25){\contour{white}{\Large t} }
@@ -409,21 +400,21 @@ Looking at the collision data, in figures $\ref{fig:data_raw}$ and $\ref{fig:dat
 \put(34,35){\contour{white}{\large ${}^{4}$He} }
 \put(60,26){\contour{white}{\large ${}^{6}$Li} }
 \put(60,30){\contour{white}{\large ${}^{7}$Li} }
-
 \end{overpic}
 \caption{Uncorrected and corrected (desaturated) collision data at polar angles of $\theta < 40^{\circ} and -80^{\circ} < \phi < 80^{\circ}$}
-\label{fig:data_raw}
+\label{fig:data_combine}
 \end{figure}
+\begin{comment}
 
-%\begin{figure}[H]
-%\includegraphics[width=\linewidth]{data_sat.png}
-%\caption{Uncorrected collision data.}
-%\label{fig:data_raw}
-%\end{figure}
+\begin{figure}[H]
+\includegraphics[width=\linewidth]{data_combine.png}
+\caption{Uncorrected and corrected (desaturated) collision data at polar angles of $\theta < 40^{\circ} and -80^{\circ} < \phi < 80^{\circ}$}
+\label{fig:data_combine}
+\end{figure}
 
 \begin{comment}
 \begin{figure}[H]	
-\begin{overpic}[width=\linewidth]{data_desat.png}
+\begin{overpic}[width=\linewidth]{data_combine.png}
 \put(22,15){\contour{white}{\Large p} }
 \put(27,20){\contour{white}{\Large d} }
 \put(31,25){\contour{white}{\Large t} }

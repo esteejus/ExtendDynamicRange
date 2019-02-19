@@ -1,21 +1,34 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 \expandafter\ifx\csname url\endcsname\relax
   \def\url#1{\texttt{#1}}\fi
 \expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
 \expandafter\ifx\csname href\endcsname\relax
   \def\href#1#2{#2} \def\path#1{#1}\fi
 
-\bibitem{eos}
-G.~R. et. al., A tpc detector for the study of high multiplicity heavy ion
-  collisions, IEEE Transactions on Nuclear Science 37~(2) (1990) 56--64.
-\newblock \href {http://dx.doi.org/10.1109/23.106592}
-  {\path{doi:10.1109/23.106592}}.
-
 \bibitem{shane}
 R.~S. et. al., S$\pi$rit: A time-projection chamber for symmetry-energy
   studies, NIM A 784 (2015) 513--517.
 \newblock \href {http://dx.doi.org/10.1016/j.nima.2015.01.026}
   {\path{doi:10.1016/j.nima.2015.01.026}}.
+
+\bibitem{bichsel}
+H.~Bichsel, A method to improve tracking and particle identification in tpcs
+  and silicon detectors, Nucl. Instr. Meth. Phys. Res. A 562 (2006) 154--197.
+\newblock \href {http://dx.doi.org/10.1016/j.nima.2006.03.009}
+  {\path{doi:10.1016/j.nima.2006.03.009}}.
+
+\bibitem{pattpc}
+D.~S. et. al., Prototype at-tpc: Toward a new generation active target time
+  projection chamber for radioactive beam experiments, Nucl. Instr. Meth. Phys.
+  Res. A 691~(1) (2012) 39--58.
+\newblock \href {http://dx.doi.org/10.1016/j.nima.2012.06.050}
+  {\path{doi:10.1016/j.nima.2012.06.050}}.
+
+\bibitem{eos}
+G.~R. et. al., A tpc detector for the study of high multiplicity heavy ion
+  collisions, IEEE Transactions on Nuclear Science 37~(2) (1990) 56--64.
+\newblock \href {http://dx.doi.org/10.1109/23.106592}
+  {\path{doi:10.1109/23.106592}}.
 
 \bibitem{suwat}
 S.~et. al., A gating grid driver for time projection chambers, Nucl. Instr.
