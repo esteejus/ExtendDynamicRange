@@ -5,6 +5,23 @@
 \expandafter\ifx\csname href\endcsname\relax
   \def\href#1#2{#2} \def\path#1{#1}\fi
 
+\bibitem{blumrol}
+W.~Blum, W.~Riegler, L.~Rolandi, Particle Detection with Drift Chambers,
+  Springer, Berlin, Heidelberg, 2008.
+
+\bibitem{gem}
+S.~et. al., Charge amplification and transfer processes in the gas electron
+  multiplier, Nucl. Instr. Meth. Phys. Res. A 438~(2-3) (1999) 376--408.
+\newblock \href {http://dx.doi.org/10.1016/S0168-9002(99)00820-7}
+  {\path{doi:10.1016/S0168-9002(99)00820-7}}.
+
+\bibitem{micromeg}
+Y.~et. al., Micromegas: A high-granularity position-sensitive gaseous detector
+  for high particle-flux environments, Nucl. Instr. Meth. Phys. Res. A 376~(1)
+  (1996) 29--35.
+\newblock \href {http://dx.doi.org/10.1016/0168-9002(96)00175-1}
+  {\path{doi:10.1016/0168-9002(96)00175-1}}.
+
 \bibitem{shane}
 R.~S. et. al., S$\pi$rit: A time-projection chamber for symmetry-energy
   studies, NIM A 784 (2015) 513--517.
@@ -42,6 +59,13 @@ E.~P. et. al., Get: A generic and comprehensive electronics system for nuclear
 \newblock \href {http://dx.doi.org/10.1016/j.phpro.2012.02.506}
   {\path{doi:10.1016/j.phpro.2012.02.506}}.
 
+\bibitem{aki}
+T.~I. et. al., Application of the generic electronics for time projection
+  chamber (get) readout system for heavy radioactive isotope collision
+  experiments, Nucl. Instr. Meth. Phys. Res. A 899~(11) (2018) 43--48.
+\newblock \href {http://dx.doi.org/10.1016/j.nima.2018.05.022}
+  {\path{doi:10.1016/j.nima.2018.05.022}}.
+
 \bibitem{fairroot}
 M.~A.-T. et. al., The fairroot framework, J. Phys.: Conf. Ser. 396~(2).
 \newblock \href {http://dx.doi.org/10.1088/1742-6596/396/2/022001}
@@ -65,9 +89,5 @@ E.~G. et. al., Optimum geometry for strip cathodes or grids in mwpc for
   163 (1979) 83--92.
 \newblock \href {http://dx.doi.org/10.1016/0029-554X(79)90035-1}
   {\path{doi:10.1016/0029-554X(79)90035-1}}.
-
-\bibitem{blumrol}
-W.~Blum, W.~Riegler, L.~Rolandi, Particle Detection with Drift Chambers,
-  Springer, Berlin, Heidelberg, 2008.
 
 \end{thebibliography}

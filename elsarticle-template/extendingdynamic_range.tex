@@ -8,6 +8,7 @@
 \usepackage{contour}
 \usepackage{color}
 \usepackage{comment}
+\usepackage{lipsum}
 \graphicspath{ {images/} }
 
 \usepackage[T1]{fontenc}
@@ -65,22 +66,25 @@
 \author[nscl,msu]{W.G. Lynch}
 \author[nscl,msu]{J. Barney}
 \author[nscl,msu]{G. Cerizza}
-\author[kor]{B. Hong}
-\author[riken]{T. Isobe}
 \author[nscl]{G. Jhang}
+\author[kor]{J. W. Lee}
+\author[nscl]{R. Wang}
+\author[riken]{T. Isobe}
 \author[kyoto]{M. Kaneko}
 \author[riken]{M. Kurata-Nishimura}
+\author[kyoto]{T. Murakami}
+\author[nscl]{R. Shane}
+\author[nscl]{S. Tangwancharoen}
+\author[nscl]{C. Y. Tsang}
+\author[nscl]{M. B. Tsang}
+\author[kor]{B. Hong}
 \author[krakow]{P. Lasko}
-\author[kor]{J. W. Lee}
 \author[krakow]{J. \L ukasik}
 \author[a&m]{A.B. McIntosh}
-\author[kyoto]{T. Murakami}
 \author[krakow]{P. Paw\l owski}
 \author[poland]{K. Pelczar}
 \author[nscl]{C. Santamaria}
 \author[riken]{D. Suzuki}
-\author[nscl]{M. B. Tsang}
-\author[china1,china2]{R. Wang}
 \author[a&m]{S.J. Yennello}
 \author[tsing]{Y. Zhang}
 \author[]{and the S$\pi$RIT collaboration}
@@ -94,14 +98,14 @@
 \address[a&m]{Cyclotron Institute, Texas A$\&$M University, College Station, TX 77843, USA }
 \address[tsing]{Department of Physics, Tsinghua University, Beijing 100084, P. R. China}
 \address[poland]{Faculty of Physics, Astronomy and Applied Computer Science, Jagiellonian University, ul. Go\l \k{e}bia 24, 31-007 Krak\'{o}w}
-\address[china1]{State Key Laboratory of Radiation Medicine and Protection, School of Radiation Medicine and Protection, Soochow University, Suzhou 215123, China}
-\address[china2]{Collaborative Innovation Center of Radiological Medicine of Jiangsu Higher Education Institutions, Suzhou 215123, China}
+%\address[china1]{State Key Laboratory of Radiation Medicine and Protection, School of Radiation Medicine and Protection, Soochow University, Suzhou 215123, China}
+%\address[china2]{Collaborative Innovation Center of Radiological Medicine of Jiangsu Higher Education Institutions, Suzhou 215123, China}
 
 
 
 \begin{abstract}
 
-When Time Projection Chambers (TPCs) are used in low to intermediate heavy ion collisions, the mass and momentum range covered by the emitted particles cover a wide range in energy losses. Many TPC readout electronics currently only have a single gain output with a fixed dynamic range. In a recent set of experiments using the SAMURAI Pion-Reconstruction and Ion-Tracker (S$\pi$RIT) TPC, it was important to simultaneously measure relativistic pions and heavy ion tracks from the same collisions. As a tracks energy loss is collected and multiplied by the anode wires, a distribution of image charges are induced on the TPC read out pads. If the avalanche on a wire is large enough, the charge collected on a pad will saturate the electronics, though only for pads directly underneath the avalanche; pads further away in the distribution will not be saturated. Using these unsaturated pads and the known distribution function, we can estimate the saturated pads, increasing the dynamic range by a factor of 5.
+When Time Projection Chambers (TPCs) are used in low to intermediate heavy ion collisions, the mass and momentum range of the emitted particles cover a wide range in energy losses. Many TPC readout electronics currently only have a single gain output with a fixed dynamic range. In a recent set of experiments using the SAMURAI Pion-Reconstruction and Ion-Tracker (S$\pi$RIT) TPC, it was important to simultaneously measure relativistic pions and heavy ion tracks from the same collisions. As a track's energy loss is collected and multiplied by the anode wires, a distribution of image charges are induced on the TPC read out pads. If the avalanche on a wire is large enough, the charge collected on a pad will saturate the electronics, though only for pads directly underneath the avalanche; pads further away in the distribution will not be saturated. Using these unsaturated pads and the known distribution function, we can estimate the saturated pads, increasing the dynamic range by a factor of 5.
 
 \end{abstract}
 
@@ -116,20 +120,19 @@ When Time Projection Chambers (TPCs) are used in low to intermediate heavy ion c
 
 \section{Introduction} 
 
-As charged particles resulting from a heavy ion collision (HIC) pass through a Time Projection Chamber (TPC), they ionize the gas inside of the drift region of the chamber. These electrons drift under influence of the electric and magnetic fields in the to the avalanche region where they are multiplied in the presence of the high electric fields of wire, GEM, or Mircromega structures. Image currents induced in nearby pad electrodes are read out into electronics to obtain the trajectories and stopping powers, <dE/dx>, of the charged particles traversing the TPC.
+As charged particles resulting from a Heavy Ion Collision (HIC) pass through a Time Projection Chamber (TPC), they ionize the gas inside of the drift region of the chamber. These electrons drift under influence of the electric and magnetic fields until they arrive at the avalanche region where they are multiplied in the presence of the high electric fields of wire \cite{blumrol}, GEM \cite{gem}, or Mircromega structures \cite{micromeg}. Image currents induced in nearby pad electrodes are read out into electronics to obtain the trajectories and stopping powers, <dE/dx>, of the charged particles traversing the TPC.
 
-In high energy  HIC, most of these particles have charges of $\pm$e and stopping powers which span a relatively narrow range; the dynamical range of TPC readout electronics typically reflects this narrow range of stopping powers. Challenges emerge when applying TPCs to low or intermediate energy HIC where stopping powers range from the very small values for minimum ionizing particles to the much higher stopping powers of slower moving, heavy fragments. 
+In high energy HIC, most of the resulting particles have charges of $\pm$e and stopping powers which span a relatively narrow range; the dynamical range of TPC readout electronics typically reflects this narrow range of stopping powers. Challenges emerge when applying TPCs to low or intermediate energy HIC where stopping powers range from the very small values for minimum ionizing particles to the much higher stopping powers of slower moving, heavy fragments. 
 
-Figure \ref{fig:intro} shows some of the stopping powers of light particles with Z=1-3 typically measured in ${}^{132}$Sn+${}^{124}$Sn collisions at an intermediate incident energy of E/A=270 MeV by the SAMURAI Pion Reconstruction and Ion-Tracker (S$\pi$RIT) TPC, \cite{shane}. Here the red lines in the figure are the predicted energy loss, the most probable dE/dx, as a function of rigidity P/q, generated from Geant4 simulations. 
+Figure \ref{fig:intro} shows some of the stopping powers of light particles with Z=1-3 typically measured in Sn + Sn collisions at an intermediate incident energy of E/A=270 MeV by the SAMURAI Pion Reconstruction and Ion-Tracker (S$\pi$RIT) TPC, \cite{shane}. Here the red lines in the figure are the predicted energy loss, the most probable dE/dx, as a function of rigidity P/q, generated from Geant4 simulations. 
 
-The dynamic range expected from TPC electronics is on the order of 1000:1 signal to noise ratio for the maximum signal. The position measurement of a track comes from fitting the induced charge distribution on several pads. As an example the middle pad has the largest signal  the small pads adjacent to it need to have at least a signal to noise ratio of 6:1. If they hold  10\% of the charge each then the largest signal, holding 80\% of the charge, has a signal to noise of around 50:1. 
+The typical dynamic range expected from TPC electronics is on the order of 1000:1 signal to noise ratio for the maximum signal. To determine the track position with enough position resolution several pads from the induced charge distribution must be measured; typically over 2-3 pads; the condition for minimum ionizing particles (m.i.p.) require the smallest charge in the distribution to have a signal to noise ratio of at least 6:1. Suppose the two smallest pads hold 10\% of the charge each; then the middle pad, holding the largest 80\% of the charge, would have a maximum signal to noise of around 50:1. 
 
- Therefore the maximum signal in a TPC is roughly 20 times that of a minimum ionizing particle's signal. The blue dashed lines in Figure \ref{fig:intro}, located at the top and bottom of the vertical blue bar, are separated by a factor of 20, representing the typical effective dynamic range in a TPC. 
+ Therefore the effective maximum signal in a TPC is roughly 20 times that of a minimum ionizing particle's signal in a given pad. The blue dashed lines in Figure \ref{fig:intro}, located at the top and bottom of the vertical blue bar, are separated by a factor of 20, representing the typical effective dynamic range in a TPC. 
 
-This dynamic range estimate should be regarded as approximate because the energy loss fulcuates significantly from the mean value predicted from the most probable energy loss as described in Bichsel \cite{bichsel}. Nevertheless, the blue dashed lines and vertical blue bar illustrate the range of energy losses that any fixed gain readout system can sample is limited; one can change the gain and shift the energy loss range that can be sampled, but not increase the range of it. 
+This dynamic range estimate should be regarded as approximate because the energy loss fluctuates significantly from the mean value predicted from the most probable energy loss as described in Bichsel \cite{bichsel}. Nevertheless, the blue dashed lines and vertical blue bar illustrate the range of energy losses that any fixed gain readout system can sample is limited; one can change the gain and shift the energy loss range that can be sampled, but not increase the range of it. 
 
-
-The hyperbolic increase in the stopping powers at low momentum illustrates the degree to which the range of stopping powers can exceed the electronics effective dynamic range and highlights the problems encountered in studies of intermediate energy collisions, in which light particles are abundantly produced with low momenta and more highly charged particles are emitted as well. Similar problems are encountered when TPCs are used as active targets in direct reaction studies with rare isotope beams \cite{pattpc} [CITE ANOTHER ARTICLE??? BILL???]. 
+The hyperbolic increase in the stopping powers at low momentum illustrates the degree to which the range of stopping powers can exceed the electronics effective dynamic range and highlights the problems encountered in studies of intermediate energy collisions, in which light particles are abundantly produced with low momenta and highly charged particles are emitted as well. Similar problems are encountered when TPCs are used as active targets in direct reaction studies with rare isotope beams \cite{pattpc}[OTHER ARTICLE?]. 
 
  
 \begin{figure}[H]
@@ -138,9 +141,9 @@ The hyperbolic increase in the stopping powers at low momentum illustrates the d
 \label{fig:intro}
 \end{figure}
 
-Several techniques have been employed to increase the range in energy losses obsevable. One common technique has has been to lower the effective gain of selected sense pads in the readout plane. This can be done be lowering the gain of the readout readout electronics in that channel or by changing the gas amplification at the readout plane. In the EOS TPC \cite{eos} this was done by decreasing the voltages in select anode wires in the multi-wire readout. With the prototype Active Target Time Projection Chamber lowering or increasing the gain was achieved by decreasing or increasing the electric fields on selected pads within a Micromegas \cite{pattpc}. The results of changing the gas-gain vs. the electronic gain are rather similar; reducing the gain to obtain the dynamic range indicted by the dashed-dotted magenta lines, making the TPC effectively blind to minimum ionizing particles in the regions of lower gain. 
+Several techniques have been employed to increase the range in energy losses observable. One common technique is to lower the effective gain of selected sense pads in the readout plane. This can be done by lowering the gain of the readout electronics in that channel or by changing the gas amplification at the readout plane in certain areas of the TPC. In the EOS TPC \cite{eos} this was done by decreasing the voltages in select anode wires in the multi-wire readout. With the prototype Active Target Time Projection Chamber lowering or increasing the gain was achieved by decreasing or increasing the electric fields on selected pads within a Micromegas \cite{pattpc}. The results of changing the gas-gain vs. the electronic gain are rather similar; reducing the gain to obtain the dynamic range, making the TPC effectively blind to minimum ionizing particles in the regions of lower gain. 
 
-While future developments in TPC electronics may ultimately provide means to significantly improve the dynamic range of TPC electronics, it is useful to consider whether software strategies can be developed that can compensate for these dynamic range limitations of existing devices. In this paper, we illustrate one approach to expand the dynamic range within the context of a standard multi-wire TPC, without the need of extra hardware or dedicating regions of lower lower gain.
+While future developments in TPC electronics may ultimately provide means to significantly improve the dynamic range of TPC electronics, it is useful to consider whether software strategies can be developed that can compensate for these dynamic range limitations of existing devices. In this paper, we illustrate one approach to expand the dynamic range within the context of a standard multi-wire TPC, without the need of extra hardware or dedicating regions of lower gain.
 
 
 \paragraph{1.1 TPC Overview}
@@ -154,42 +157,35 @@ For ease of illustration and discussion in this paper, we use a coordinate syste
 \label{fig:padwire}
 \end{figure}
 
-\paragraph{Pad plane} 
+\paragraph{Configuration of the pad and wire planes} 
 The S$\pi$RIT TPC pad plane is composed of a rectangular charge sensitive pads, each with an x dimension of of 8 mm wide, and a z dimension of 12 mm. These pads are arranged in a grid measuring 112 by 108 pads with a total area of 1344 mm x 864 mm.
 
-\paragraph{Wire planes}
-As illustrated in Figure \ref{fig:padwire}, the S$\pi$RIT TPC consists of three wire planes below the pad plane, with the wires aligned along the x-axis. The wire plane farthest from the pad plane (14 mm) operates as an ion-gate or a gating grid. Details on the gating grid can be found in \cite{suwat}. The middle wire plane (8 mm) is grounded. When the gating grid is open, electrons ionized by reaction products in the drift volume drift through both the gating grid and ground planes. 
+As illustrated in Figure \ref{fig:padwire}, the S$\pi$RIT TPC consists of three wire planes below the pad plane, with the wires aligned along the x-axis. The wire plane farthest from the pad plane (14 mm) operates as an ion-gate or a gating grid. Details on the design and operation of the gating grid can be found in \cite{suwat}. The middle wire plane (8 mm) is grounded. When the gating grid is open, electrons ionized by reaction products in the drift volume drift through both the gating grid and ground planes. 
 
 Closest to the pad plane is the high voltage, anode wire plane (4 mm), consisting of 20 $\mu$m diameter wires spaced 4 mm apart. In the vicinity of these wires an avalanche occurs multiplying the secondary electrons drifting up from the drift volume, created from the track's energy loss in the detector gas. When these secondary electrons reach the anode wires, they are amplified on the order of 1000 times creating electron and ion pairs. It is the motion of these slow moving ions, as they drift away from the anode wires, that induces image charges on the read out pads above. The distribution of image charged on the pad plane is centered about the avalanche region on the wires and its width is fixed by the distance from the pad plane. 
 
-The anode wires are sectioned off into 14 independent sections, each containing 26 wires; 12 sections were biased to 1460 V. This setting was optimized to ensure m.i.p. particles such as pions would have a signal to noise ratio of around 20:1. The two remaining sections were biased to 1214 V due to high current issues, reducing the gas gain by a factor of 10 times as compared to the other anode sections. As demonstrated by the EOS TPC \citep{eos}, lowering the anode wires effectively extended the dynamic range.  This gain reduction allowed for a direct validation of the success of the new method for extending the dynamic range presented here. 
+The anode wires are sectioned off into 14 independent sections, each containing 26 wires; 12 sections were biased to 1460 V. This setting was optimized to ensure minimum ionizing particles (m.i.p.) such as pions would have a signal to noise ratio of around 20:1. The two remaining sections were biased to 1214 V due to high current issues, reducing the gas gain by a factor of 10 times as compared to the other anode sections. As demonstrated by the EOS TPC \citep{eos}, lowering the anode wires effectively extended the dynamic range.  This gain reduction allowed for a direct validation of the success of the new method for extending the dynamic range presented here. 
 
 \paragraph{Generic Electronics for TPCs}
-Signals in the S$\pi$RIT TPC are amplified and digitized by the recently developed Generic Electronics for TPCs (GET) \cite{get}.  Short cables transmit the signals from the pads to the inputs of the AGET chips. Each AGET chip services 64 pads (63 pads are connected in our case), contains a pre-amplifier, and a Switched Capacitor Array (SCA), with a maximum of 512 time buckets with an adjustable sampling frequency of 1 to 100 MHz. Four AGET chips are mounted on one AsAd (ASIC and ADC) motherboard. The gain of each AGET can be configured as 0.12, 0.24, 1.0, or 10 pC over the whole dynamic range, and the ADCs on each AsAd board provides 12 bit resolution. The peaking times of the shaping amplifiers can be set to 69, 117, 232, 501, 720, or 1014 ns. In this experiment, the gain was set to the highest setting, 0.12 pC, the peaking time 117 ns, and the sampling frequency 25 MHz (resulting in 40 ns time buckets). The AGET 2.0, ASAD 2.1, and COBO 1.0 firmware versions were used. The variations in the electronics were calibrated by measuring the response of each channel to an injected reference pulse, covering the full dynamic range of each channel. 
+Signals in the S$\pi$RIT TPC are amplified and digitized by the recently developed Generic Electronics for TPCs (GET) \cite{get}.  Short cables transmit the signals from the pads to the inputs of the AGET chips. Each AGET chip services 64 pads (63 pads are connected in our case), contains a pre-amplifier, and a Switched Capacitor Array (SCA), with a maximum of 512 time buckets with an adjustable sampling frequency of 1 to 100 MHz. Four AGET chips are mounted on one AsAd (ASIC and ADC) motherboard. The gain of each AGET can be configured as 0.12, 0.24, 1.0, or 10 pC over the whole dynamic range, and the ADCs on each AsAd board provides 12 bit resolution. The peaking times of the shaping amplifiers can be set to 69, 117, 232, 501, 720, or 1014 ns. In this experiment, the gain was set to the highest setting, 0.12 pC, the peaking time 117 ns, and the sampling frequency 25 MHz (resulting in 40 ns time buckets). The AGET 2.0, ASAD 2.1, and COBO 1.0 firmware versions were used. The variations in the electronics were calibrated by measuring the response of each channel to an injected reference pulse, covering the full dynamic range of each channel. A more detailed description and the operation of the GET electronics in the S$\pi$RIT TPC can be found in ref. \cite{aki}.
 
 \paragraph{Analysis Software}
-The S$\pi$RITROOT software is modular tasked based code based on the FAIRROOT package written in C++ \cite{fairroot}. The S$\pi$RITROOT reconstruction software is constructed from several main tasks: Decoder task, Pulse Shape Algorithm (PSA), Helix Track Finding Algorithm, Clustering Algorithm, Track Fitting, and Vertex Fitting.
+The software used to reconstruct the events is called S$\pi$RITROOT and is based on the FAIRROOT package written in C++ \cite{fairroot}. Due to the large number of particles emitted in HIC, there may be several signals in a pad coming from two tracks passing under the same pad separated  by arrival time. Using an expected pulse shape the S$\pi$RITROOT fits and decouples the signal pulses within a pad, giving the arrival time and height of the signal from each particular track. The height of the fitted pulse is proportional to the total charge of that event, Q and the y-coordinate is calculated as $y = v\cdot t_0$ where $v$ is the drift velocity and $t_0$ the arrival time. Combining the information from these first two tasks, (x,y,z,Q), we construct what is called a "hit". 
 
-The decoder task converts the binary data file into a container class which maps the electronics channels into the corresponding pads and (x,z) coordinates. 
-
-There may be several pulses in a pad coming from two tracks passing under the same pad separated  by arrival time. Using an expected pulse shape the PSA task fits the signal pulses within a pad, giving the arrival time of the drifted electrons from each particular track. The height of the fitted pulse is proportional to the total charge of that event, Q and the y-coordinate is calculated as $y = v\cdot t_0$ where $v$ is the drift velocity and $t_0$ the arrival time. Combining the information from these first two tasks, (x,y,z,Q), we construct what is called a "hit". 
-
- The Helix Track Finding Algorithm finds the collection of hits belonging to one track out of all the hits in an event. The hits within a track are then reduced into clusters. A cluster's position is the average position of the hits within a cluster, with the total charge of the cluster being the sum of the hits charges. 
+ The helix track finding algorithm is used to find the collection of hits belonging to one track out of all the hits in an event. The hits within a track are then reduced into clusters. A cluster's position is the average position of the hits within a cluster, with the total charge of the cluster being the sum of the hits charges. 
  
- A tracks average position is estimated by the cluster's average position. The clusters are then fitted in the GENFIT track fitting package \cite{genfit}, giving the final momentum of the track. A final vertex of the event is fitted from all tracks using the package RAVE \cite{rave}. 
+ A track's average position is estimated by the cluster's average position. The clusters are then fitted in the GENFIT track fitting package \cite{genfit}, giving the final momentum of the track. A final vertex of the event is fitted from all tracks using the package RAVE \cite{rave}. Further details of tracking and the S$\pi$RITROOT software can be found in [JUNG WOOS PAPER]
  
 
 \paragraph{Definition of clustering}
 
 A brief description of the method of clustering is illustrated in Figure \ref{fig:topview}. It is impractical to cluster in both the x and z-axis and we only cluster the hits along one axis. The three clusters at the bottom of Figure \ref{fig:topview} are clustered along the x-axis and the upper three are along the z-axis, as shown by the bolded pads for one of the clusters in each direction.
 
- The clustering direction depends on the angle  of the track with respects to the x-axis, defined as $\theta$. For example, a track going along the z-axis the crossing angle is defined as $90^{\circ}$, and a track going along the x-axis defined as $0^{\circ}$. In the case that the crossing angle is $45^{\circ} < \theta \leq 90^{\circ} $ the clustering direction is along the x-axis. For $0^{\circ} < \theta \leq 45^{\circ}$ it is along the z-axis. 
+
 
  The position along the clustering direction is calculated by weighting the individual hit's positions by their charges $q_i$ and getting the mean value. The other direction is set to the center of the pad. For example if we are clustering along the x-axis for a cluster, the z-position is set to the center of the pad in the z-direction and vice versa. 
-
-Clustering in this way gives us better position resolution for calculating the position of each cluster. You could imagine if we calculated the clusters only along the x-axis for tracks with $\theta \approx 0^{\circ}$ the x-position is not well defined. By clustering in the direction most perpendicular to the track, we get a better position resolution.
-
-
+ 
+ The clustering direction depends on the angle  of the track with respects to the x-axis, defined as $\theta$. For example, for a track going along the z-axis the crossing angle is defined as $90^{\circ}$, and for a track going along the x-axis is defined as $0^{\circ}$. In the case that the crossing angle is $45^{\circ} < \theta \leq 90^{\circ} $ the clustering direction is along the x-axis. For $0^{\circ} < \theta \leq 45^{\circ}$ it is along the z-axis. Clustering in this way gives us better position resolution for calculating the position of each cluster; if  for example, we calculated position along the x-axis for tracks with $\theta \approx 0^{\circ}$ the x-position is not well defined. By clustering in the direction most perpendicular to the track we get a better position resolution.
 
 \begin{figure}[H]
 \includegraphics[width=\linewidth]{padsat_Large}
@@ -198,7 +194,7 @@ Clustering in this way gives us better position resolution for calculating the p
 \end{figure}
 
 \section{Pad Response Function}
-As illustrated in Figure \ref{fig:prf} the distribution resulting from an electron avalanche is 2-dimensional, with the charge observed on each pad being the integral of that distribution over the pad's dimensions; also called the Pad Response Function (PRF). The projection onto the x and z-axis of this distribution is shown as $\rho(x)$ and $\rho(z)$. 
+As illustrated in Figure \ref{fig:prf} the charge distribution on the pad plane resulting from an electron avalanche is 2-dimensional, with the projections onto the x and z-axis of this distribution shown as $\rho(x)$ and $\rho(z)$. The charge observed on each pad is the integral of this distribution over the pad's dimensions, which is called the Pad Response Function (PRF).
 
 In this example the clustering direction would be along the x-axis, as illustrated by the bolded pads. By choosing to clustering only in one direction, we have not included the charge in adjacent pads along the z-axis resulting from the tails of $\rho(z)$. Therefore the charge not included in the the bolded pads will be included in adjacent clusters, introducing small correlations in charge between neighboring clusters. 
 
@@ -209,7 +205,7 @@ In this example the clustering direction would be along the x-axis, as illustrat
 \end{figure}
 
 \paragraph{Gatti Pad Response Function}
-Gatti \cite{gatti} expressed a semi-empirical equation for the charge distribution in a simple multi-wire TPC such as that found in the S$\pi$RIT TPC. Given in Eq. \ref{eq:gatti}, the function depends only on the width of a pad (w), height of the anode plane to the pad plane (h), and the distance of the pad center to the avalanche point $\lambda$. It is a single parameter equation where the two parameters $K_1 = \frac{K_{2}\sqrt{K_3}}{4 atan(\sqrt{K_3})}$ and $K_2 = \frac{\pi}{2}\left(1-\frac{\sqrt{K_{3}}}{2}\right)$ depend on the parameter $K_3$, which is a function of the ratio of the anode wire diameter to the height of the anode wires to the pad plane. $K_3$ can be looked up in a graph in \cite{blumrol} and \citep{gatti}.
+Gatti \cite{gatti} derived a semi-empirical equation for the charge distribution in a simple multi-wire TPC such as that found in the S$\pi$RIT TPC. The function given in Eq. \ref{eq:gatti}, depends only on the width of a pad (w), height of the anode plane to the pad plane (h), and the distance of the pad center to the avalanche point $\lambda$. It is a single parameter equation where the two parameters $K_1 = \frac{K_{2}\sqrt{K_3}}{4 atan(\sqrt{K_3})}$ and $K_2 = \frac{\pi}{2}\left(1-\frac{\sqrt{K_{3}}}{2}\right)$ depend on the parameter $K_3$, which is a function of the ratio of the anode wire diameter to the height of the anode wires to the pad plane. $K_3$ can be looked up in a graph in \cite{blumrol} and \citep{gatti}.
 
 \begin{equation}\label{eq:gatti}
 \begin{split}
@@ -219,9 +215,9 @@ PRF_{gatti}(\lambda)
 \end{split}
 \end{equation}
 
-\paragraph{Experimental PRF}
+\paragraph{Experimental Pad Response Function}
 
-The correlations we introduced by only clustering along one direction do not play a significant role in the particle identification, but cause deviations from the expected Gatti distribution. Also, analytic PRFs only exist for classical multi-wire TPCs. For these reasons it is useful to experimentally measure the PRF and fit it with some empirical function, typically a Gaussian, to describe its behavior. 
+The correlations we introduced by only clustering along one direction do not play a significant role in the particle identification, but cause deviations from the expected Gatti distribution. Also, analytic PRFs only exist for classical multi-wire TPCs. For these reasons it is useful to experimentally measure the PRF and fit it with an empirical function, typically a Gaussian, to describe its behavior. 
 
 As shown in Figure \ref{fig:topview}, we postulate that the PRF is a function of the total charge deposited in a cluster $Q = \sum_i q_i$ and the difference in position of the center of the $i^{th}$ pad, $x_i$, to the mean position $\bar{x} = \sum_i x_i q_i/Q$, which we call $\lambda_i = x_i-\bar{x}$. The PRF is simply defined as the charge fraction of each pad as a function of $\lambda$, Equation \ref{eq:prf}. 
 
@@ -229,7 +225,7 @@ As shown in Figure \ref{fig:topview}, we postulate that the PRF is a function of
 PRF(\lambda_i) = \frac{q_i(\lambda_i)}{Q}
 \end{equation}
 
-Averaging over many events in the experimental data, the resulting PRF for the S$\pi$RIT TPC is shown in Figure \ref{fig:expprf}. Here we see the deviations from the expected analytic Gatti distribution where as fitting with a two parameter Gaussian function describes the data better. With the two parameters being the normal coefficient,$N_0$, sigma $\sigma$, and with a mean value assumed to be 0 as given in Equation \ref{eq:gaus}.
+Averaging over many events in the experimental data, the resulting PRF for the S$\pi$RIT TPC is shown in Figure \ref{fig:expprf}. Here we see the deviations from the expected analytic Gatti distribution (black curve); where as fitting with a two parameter Gaussian function describes the data better (red curve), Equation \ref{eq:gaus}. With the two parameters being the normal coefficient,$N_0$, sigma $\sigma$, and with a mean value assumed to be 0.
 
 \begin{equation}\label{eq:gaus}
 PRF_{gaus}(\lambda) = N_0 e^\frac{-\lambda^2}{2\sigma^2}
@@ -244,8 +240,8 @@ PRF_{gaus}(\lambda) = N_0 e^\frac{-\lambda^2}{2\sigma^2}
 \label{fig:expprf}
 \end{figure}
 
-\section{PRF vs crossing angle}
-The shape of the PRF depends on the crossing angle \citep{gatti}. As plotted in Figure \ref{fig:prfangle} is the PRF of a $\pi^-$ tracks vs the crossing angle $\theta$. One can see the PRF gets wider going from  $90^{\circ}$ to $45^{\circ}$. Once could imagine if we did not switch clustering directions the PRF would become wider until it was a uniform distribution and there was no position resolution. Since we switch the clustering direction from x to z at $45^{\circ}$, the opposite trend is seen where the PRF becomes narrower going from $45^{\circ}$ to $0^{\circ}$.
+\section{Pad Response Function vs crossing angle}
+The shape of the PRF depends on the crossing angle \citep{gatti}; plotted in Figure \ref{fig:prfangle} is the PRF of a $\pi^-$ tracks vs the crossing angle $\theta$. The PRF gets wider starting from $90^{\circ}$  and going to $45^{\circ}$; one could imagine if we did not switch clustering directions the PRF would become wider until it was a uniform distribution and there was no position resolution. Since we switch the clustering direction from x to z at $45^{\circ}$, the opposite trend is seen where the PRF becomes narrower going from $45^{\circ}$ to $0^{\circ}$.
 
 \begin{figure}[H]
 \includegraphics[width=\linewidth]{PRF_vsAngle}
@@ -303,9 +299,9 @@ A chi squared function, $\chi^2 = \sum_i \frac{(q_i^{obs} - q_i^{expect})^2}{q_i
 \end{figure}
 
 \section{Experimental data}
-Two sets of data were used for the testing and validation of this method. A cocktail beam consisting of (p,d,t,${}^3He$,${}^4He$,${}^6Li$,${}^7Li$) light charged particles was injected into the TPC for calibration purposes, and tuned to two different ridgidity, $\beta\rho$, settings. The momentum resolution was approximately 1\%, as determined by the slits of the BigRIPS fragment separator of the Radioactive Isotope Beam Factory (RIBF) in RIKEN. A thick 21 mm thick aluminum target was inserted for part of the lower $\beta\rho$ setting, further reducing the energy of the beam for a third calibration point. 
+Two sets of data were used for the testing and validation of this method. A cocktail beam consisting of (p,d,t,${}^3He$,${}^4He$,${}^6Li$,${}^7Li$) light charged particles was injected into the TPC for calibration purposes, and tuned to two different ridgidity, $\beta\rho$, settings. The momentum resolution was approximately 1\%, as determined by the slits of the BigRIPS fragment separator of the Radioactive Isotope Beam Factory (RIBF) in RIKEN. A thick 21 mm thick aluminum target was inserted for part of the lower $\beta\rho$ setting, further degrading the energy of the beam for a third calibration point. 
 
-In a typical cocktail event, one particle enters the TPC volume at a time and parallel to the pad plane, representing an ideal case for momentum and dE/dx determination; as it does not suffer from inefficiencies of high multiplicity events seen in the collision experimental data.  
+Shown in Figure \ref{fig:cocktail} is a typical cocktail event, where one particle enters the TPC volume at a time and parallel to the pad plane, representing an ideal case for momentum and dE/dx determination; as it does not suffer from inefficiencies of high multiplicity events seen in the collision experimental data.  
 
 \begin{figure}[H]
 \includegraphics[width=\linewidth]{data.pdf}
@@ -321,120 +317,45 @@ In a typical cocktail event, one particle enters the TPC volume at a time and pa
 
 The other type of data was the collision of a ${}^{132}$Sn beam onto a ${}^{124}$Sn target triggered on central nuclear collisions. Shown in Figure \ref{fig:data} is the typical pad plane response for a central nuclear collision. During the experiment the voltages of two anode sections (as indicated by red arrows in Figure \ref{fig:data}) were biased to 1214 V. The gain of these sections were also reduced by a factor of about 10 times, as compared with the other sections which were biased to 1460 V. We refer to the 1460 V region as high gain and the 1214 V region as low gain. 
 
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\linewidth]{dedx_compare}
+\caption{The left figure shows the uncorrected the method of desaturation was not applied. While in the right figure the desaturation technique was applied to the dE/dx in the high gain region. After matching the low gain dE/dx does not suffer from saturation and represents the true dE/dx value.}
+\label{fig:lowvshigh}
+\end{figure*}
+
+\begin{figure*}[t]
+\includegraphics[width=\linewidth]{cocktail_combine.png}
+\caption{Uncorrected and corrected (desaturated) cocktail data.}
+\label{fig:cocktail_combine}
+\end{figure*}
+
+\begin{figure*}[t]
+\includegraphics[width=\linewidth]{data_combine}
+\caption{Uncorrected and corrected (desaturated) collision data at polar angles of $\theta < 40^{\circ} and -80^{\circ} < \phi < 80^{\circ}$}
+\label{fig:data_combine}
+\end{figure*}
 
 \section{Results}
 \paragraph{Low gain vs corrected high gain}
 
 Tracks which saturate pads in the high gain region are not saturated in the low gain region; by comparing the dE/dx values of these two sections, we can directly measure the success of the high gain region's desaturation using the method described above.  
-
-\begin{figure}[H]
-\includegraphics[width=\linewidth]{dedxcompare_nodesat}
-\caption{The uncorrected high gain dE/dx vs low gain dE/dx collision data.  }
-\label{fig:lowvshigh_raw}
-\end{figure}
  
-In Figure \ref{fig:lowvshigh_raw}, the effect of saturation can be seen in the high gain region for the uncorrected data. For signals below 400 ADC/mm the electronics are not saturated, and therefore the high and low gain sections agree. The data starts to saturate above 400 ADC/mm in the high gain channels eventually reaching a plateau; the low gain sections have not saturated and provide true dE/dx values.
- After applying the desaturation method, the correlation between the high and low gain sections is restored, as seen in Figure \ref{fig:lowvshigh_desat}. We believe the correction to at least about 2000 ADC/mm, increasing the dynamic range by a factor of 5.
-
-\begin{figure}[H]
-\includegraphics[width=\linewidth]{dedxcompare_new}
-\caption{The corrected high gain dE/dx vs low gain dE/dx for collision data.  }
-\label{fig:lowvshigh_desat}
-\end{figure}
+In Figure \ref{fig:lowvshigh}, the effect of saturation can be seen in the high gain region for the uncorrected data. For signals below 400 ADC/mm the electronics are not saturated, and therefore the high and low gain sections agree. The data starts to saturate above 400 ADC/mm in the high gain channels eventually reaching a plateau; the low gain sections have not saturated and provide true dE/dx values.
+ After applying the desaturation method, the correlation between the high and low gain sections is restored, as seen in Figure \ref{fig:lowvshigh}. We believe the correction to at least about 2000 ADC/mm, increasing the dynamic range by a factor of 5.
 
 \paragraph{Particle Identification (PID)}
-\begin{comment}
-\begin{figure}[H]
-\begin{overpic}[grid,width=\linewidth]{cocktail_combine.png}
-\put(12,6){\contour{white}{\tiny p} }
-\put(16,7){\contour{white}{\tiny d} }
-\put(19,8){\contour{white}{\tiny t} }
-\put(20,9){\contour{white}{\tiny ${}^{3}$He} }
-\put(23,10){\contour{white}{\tiny ${}^{4}$He} }
-\put(23,17){\contour{white}{\tiny ${}^{6}$Li} }
-\put(28,17){\contour{white}{\tiny ${}^{7}$Li} }\end{overpic}
-\caption{Uncorrected and corrected (desaturated) cocktail data.}
-\label{fig:cocktail_combine}
-\end{figure}
-\end{comment}
 
-\begin{figure}[H]
-\includegraphics[width=\linewidth]{cocktail_combine.png}
-\caption{Uncorrected and corrected (desaturated) cocktail data.}
-\label{fig:cocktail_combine}
-\end{figure}
 
 Comparing the low to high gain sections provides a direct measurement for determining the success of the desaturation technique, but the goal would be to improve the particle identification (PID). In the following PID plots the red lines represent the most probable energy loss as given by Geant4 straggling functions. A linear calibration was performed to convert keV in Geant4 to ADC in the experiment given by $\frac{ADC}{mm} = 20. \frac{keV}{cm}$.
-
 
 There are pronounced PID lines of several particle species in both the uncorrected and corrected cocktail beam PID in figures \ref{fig:cocktail_combine}. Three ovals around a momentum of 1700 and two near 900 MeV/c/Z correspond to the three B$\rho$ settings injected into the TPC. The tails of the PID lines resulting from the particle losing its initial energy, passing through the walls and other materials outside the main detector volume; therefore lowering their initial momentum. 
 
 The uncorrected data in Figure \ref{fig:cocktail_combine} shows the effects of saturation; the PID lines deviate from their theoretical expectations starting around 400 ADC/mm eventually reaching a plateau. After applying the desaturation technique, we see a large improvement; most notably the He and Li particles, which suffer the most from saturation. A more subtle improvement of the lighter particles, (p,d,t), can also be seen in the PID lines at lower momentum.
 
-\begin{comment}
-\begin{figure}[H]	
-\begin{overpic}[width=\linewidth]{cocktail_desat.png}
-\put(12,7){\contour{white}{\Large p} }
-\put(15,10){\contour{white}{\Large d} }
-\put(20,10){\contour{white}{\Large t} }
-\put(25,10){\contour{white}{\large ${}^{3}$He} }
-\put(29,10){\contour{white}{\large ${}^{4}$He} }
-\put(30,15){\contour{white}{\large ${}^{6}$Li} }
-\put(35,15){\contour{white}{\large ${}^{7}$Li} }
+Looking at the collision data, in figure \ref{fig:data_combine}, we also see a similar result. The collision data PID suffers from more background and inefficiencies than the cocktail beam; nevertheless we can see a similar improvement in the PID lines when comparing the uncorrected to after the desaturation has been applied. Notably the largest improvement is the separation of particle species at lower momenta and the separation of the Li species into ${}^{6}$Li and ${}^{7}$Li, whereas there was little to no separation before. 
 
-\end{overpic}
-\caption{Corrected (desaturated) cocktail data.}
-\label{fig:cocktail_desat}
-\end{figure}
-\end{comment}
- 
-Looking at the collision data, in figure $\ref{fig:data_combine}$, we also see a similar result. The collision data PID suffers from more background and inefficiencies than the cocktail beam; nevertheless we can see a similar improvement in the PID lines when comparing the uncorrected to after the desaturation has been applied. Notably the separation of particle species at lower momenta and the separation of the Li species into ${}^{6}$Li and ${}^{7}$Li, whereas there was little to no separation before. 
-
-\begin{comment}
-\begin{figure}[H]	
-\begin{overpic}[grid,width=\linewidth]{data_combine.png}
-\put(22,15){\contour{white}{\Large p} }
-\put(27,20){\contour{white}{\Large d} }
-\put(31,25){\contour{white}{\Large t} }
-\put(30,31){\contour{white}{\large ${}^{3}$He} }
-\put(34,35){\contour{white}{\large ${}^{4}$He} }
-\put(60,26){\contour{white}{\large ${}^{6}$Li} }
-\put(60,30){\contour{white}{\large ${}^{7}$Li} }
-\end{overpic}
-\caption{Uncorrected and corrected (desaturated) collision data at polar angles of $\theta < 40^{\circ} and -80^{\circ} < \phi < 80^{\circ}$}
-\label{fig:data_combine}
-\end{figure}
-\begin{comment}
-
-\begin{figure}[H]
-\includegraphics[width=\linewidth]{data_combine.png}
-\caption{Uncorrected and corrected (desaturated) collision data at polar angles of $\theta < 40^{\circ} and -80^{\circ} < \phi < 80^{\circ}$}
-\label{fig:data_combine}
-\end{figure}
-
-\begin{comment}
-\begin{figure}[H]	
-\begin{overpic}[width=\linewidth]{data_combine.png}
-\put(22,15){\contour{white}{\Large p} }
-\put(27,20){\contour{white}{\Large d} }
-\put(31,25){\contour{white}{\Large t} }
-\put(30,31){\contour{white}{\large ${}^{3}$He} }
-\put(34,35){\contour{white}{\large ${}^{4}$He} }
-\put(60,26){\contour{white}{\large ${}^{6}$Li} }
-\put(60,30){\contour{white}{\large ${}^{7}$Li} }
-
-\end{overpic}
-\caption{Corrected (desaturated) collision data. $\theta < 40^{\circ} and -80^{\circ} < \phi < 80^{\circ}$}
-\label{fig:data_desat}
-\end{figure}
-\end{comment}
-
-%\begin{figure}[H]
-%\includegraphics[width=\linewidth]{data_desat.png}
-%\caption{Corrected (desaturated) collision data.}
-%\label{fig:data_desat}
-%\end{figure}
-
+\clearpage
 
 \section{Conclusion}
 
@@ -442,8 +363,9 @@ The saturation  of the electronics reduces dE/dx resolution and even the maximum
 
 Looking at the PID lines, and also making a direct comparison to some low gain sections of the TPC, we were able to extend the dynamic range of our electronics by a factor of about 5 times. This improved PID will allow for us to extend the momentum distributions of all species to lower momenta than what was previously available. 
 
+
 \section{Acknowledgments}
-This work was supported by the U.S. Department of Energy under Grant Nos.  DE-SC0004835,  DE-SC0014530, DE-NA0002923,  US  National Science Foundation Grant  No.  PHY-1565546, the  Japanese  MEXT  KAKENHI(Grant-in-Aid  for  Scientific  Research  on  Innovative  Areas)  grant  No. 24105004, and Polish National Science Center (NCN), under contract Nos. UMO-2013/09/B/ST2/04064 and UMO-2013/10/M/ST2/00624. The computing resources for analyzing the data was provided by the HOKUSAI-GreatWave system at RIKEN and the MSU HPCC. 
+This work was supported by the U.S. Department of Energy under Grant Nos.  DE-SC0004835,  DE-SC0014530, DE-NA0002923,  US  National Science Foundation Grant  No.  PHY-1565546, the  Japanese  MEXT  KAKENHI(Grant-in-Aid  for  Scientific  Research  on  Innovative  Areas)  grant  No. 24105004, and Polish National Science Center (NCN), under contract Nos. UMO-2013/09/B/ST2/04064 and UMO-2013/10/M/ST2/00624. The computing resources for analyzing the data was provided by the HOKUSAI-GreatWave system at RIKEN and the MSU HPCC and the EMBER cluster at the NSCL. 
 
 \section*{References}
 
