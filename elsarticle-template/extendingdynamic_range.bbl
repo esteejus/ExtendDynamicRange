@@ -24,9 +24,15 @@ Y.~et. al., Micromegas: A high-granularity position-sensitive gaseous detector
 
 \bibitem{shane}
 R.~S. et. al., S$\pi$rit: A time-projection chamber for symmetry-energy
-  studies, NIM A 784 (2015) 513--517.
+  studies, Nucl. Instr. Meth. Phys. Res. A 784 (2015) 513--517.
 \newblock \href {http://dx.doi.org/10.1016/j.nima.2015.01.026}
   {\path{doi:10.1016/j.nima.2015.01.026}}.
+
+\bibitem{genfit}
+C.~H. et. al., A novel generic framework for track fitting in complex detector
+  systems, Nucl. Instrum. Meth. A 620~(2-3) (2010) 518--525.
+\newblock \href {http://dx.doi.org/10.1016/j.nima.2010.03.136}
+  {\path{doi:10.1016/j.nima.2010.03.136}}.
 
 \bibitem{bichsel}
 H.~Bichsel, A method to improve tracking and particle identification in tpcs
@@ -71,12 +77,6 @@ M.~A.-T. et. al., The fairroot framework, J. Phys.: Conf. Ser. 396~(2).
 \newblock \href {http://dx.doi.org/10.1088/1742-6596/396/2/022001}
   {\path{doi:10.1088/1742-6596/396/2/022001}}.
 
-\bibitem{genfit}
-C.~H. et. al., A novel generic framework for track fitting in complex detector
-  systems, Nucl. Instrum. Meth. A 620~(2-3) (2010) 518--525.
-\newblock \href {http://dx.doi.org/10.1016/j.nima.2010.03.136}
-  {\path{doi:10.1016/j.nima.2010.03.136}}.
-
 \bibitem{rave}
 W.~Waltenberger, Rave—a detector-independent toolkit to reconstruct vertices,
   IEEE Transactions on Nuclear Science 58~(2) (2011) 434--444.
@@ -89,5 +89,11 @@ E.~G. et. al., Optimum geometry for strip cathodes or grids in mwpc for
   163 (1979) 83--92.
 \newblock \href {http://dx.doi.org/10.1016/0029-554X(79)90035-1}
   {\path{doi:10.1016/0029-554X(79)90035-1}}.
+
+\bibitem{bigrips}
+T.~Kubo, In-flight ri beam separator bigrips at riken and elsewhere in japan,
+  Nucl. Instr. Meth. Phys. Res. B 204 (2003) 97--113.
+\newblock \href {http://dx.doi.org/10.1016/S0168-583X(02)01896-7}
+  {\path{doi:10.1016/S0168-583X(02)01896-7}}.
 
 \end{thebibliography}
