@@ -10,27 +10,28 @@ W.~Blum, W.~Riegler, L.~Rolandi, Particle Detection with Drift Chambers,
   Springer, Berlin, Heidelberg, 2008.
 
 \bibitem{gem}
-S.~et. al., Charge amplification and transfer processes in the gas electron
-  multiplier, Nucl. Instr. Meth. Phys. Res. A 438~(2-3) (1999) 376--408.
+S.~Bachmann, et~al., Charge amplification and transfer processes in the gas
+  electron multiplier, Nucl. Instr. Meth. Phys. Res. A 438~(2-3) (1999)
+  376--408.
 \newblock \href {http://dx.doi.org/10.1016/S0168-9002(99)00820-7}
   {\path{doi:10.1016/S0168-9002(99)00820-7}}.
 
 \bibitem{micromeg}
-Y.~et. al., Micromegas: A high-granularity position-sensitive gaseous detector
-  for high particle-flux environments, Nucl. Instr. Meth. Phys. Res. A 376~(1)
-  (1996) 29--35.
+Y.~Giomataris, et~al., Micromegas: A high-granularity position-sensitive
+  gaseous detector for high particle-flux environments, Nucl. Instr. Meth.
+  Phys. Res. A 376~(1) (1996) 29--35.
 \newblock \href {http://dx.doi.org/10.1016/0168-9002(96)00175-1}
   {\path{doi:10.1016/0168-9002(96)00175-1}}.
 
 \bibitem{shane}
-R.~S. et. al., S$\pi$rit: A time-projection chamber for symmetry-energy
+R.~Shane, et~al., S$\pi$rit: A time-projection chamber for symmetry-energy
   studies, Nucl. Instr. Meth. Phys. Res. A 784 (2015) 513--517.
 \newblock \href {http://dx.doi.org/10.1016/j.nima.2015.01.026}
   {\path{doi:10.1016/j.nima.2015.01.026}}.
 
 \bibitem{genfit}
-C.~H. et. al., A novel generic framework for track fitting in complex detector
-  systems, Nucl. Instrum. Meth. A 620~(2-3) (2010) 518--525.
+C.~H$"o$ppner, et~al., A novel generic framework for track fitting in complex
+  detector systems, Nucl. Instrum. Meth. A 620~(2-3) (2010) 518--525.
 \newblock \href {http://dx.doi.org/10.1016/j.nima.2010.03.136}
   {\path{doi:10.1016/j.nima.2010.03.136}}.
 
@@ -41,50 +42,50 @@ H.~Bichsel, A method to improve tracking and particle identification in tpcs
   {\path{doi:10.1016/j.nima.2006.03.009}}.
 
 \bibitem{pattpc}
-D.~S. et. al., Prototype at-tpc: Toward a new generation active target time
+D.~Suzuki, et~al., Prototype at-tpc: Toward a new generation active target time
   projection chamber for radioactive beam experiments, Nucl. Instr. Meth. Phys.
   Res. A 691~(1) (2012) 39--58.
 \newblock \href {http://dx.doi.org/10.1016/j.nima.2012.06.050}
   {\path{doi:10.1016/j.nima.2012.06.050}}.
 
 \bibitem{eos}
-G.~R. et. al., A tpc detector for the study of high multiplicity heavy ion
+G.~Rai, et~al., A tpc detector for the study of high multiplicity heavy ion
   collisions, IEEE Transactions on Nuclear Science 37~(2) (1990) 56--64.
 \newblock \href {http://dx.doi.org/10.1109/23.106592}
   {\path{doi:10.1109/23.106592}}.
 
 \bibitem{suwat}
-S.~et. al., A gating grid driver for time projection chambers, Nucl. Instr.
-  Meth. Phys. Res. A 853 (2017) 44--52.
+S.~Tangwancharoen, et~al., A gating grid driver for time projection chambers,
+  Nucl. Instr. Meth. Phys. Res. A 853 (2017) 44--52.
 \newblock \href {http://dx.doi.org/10.1016/j.nima.2017.02.001}
   {\path{doi:10.1016/j.nima.2017.02.001}}.
 
 \bibitem{get}
-E.~P. et. al., Get: A generic and comprehensive electronics system for nuclear
-  physics experiments, Physics Procedia 37 (2012) 1799--1804.
+E.~Pollacco, et~al., Get: A generic and comprehensive electronics system for
+  nuclear physics experiments, Physics Procedia 37 (2012) 1799--1804.
 \newblock \href {http://dx.doi.org/10.1016/j.phpro.2012.02.506}
   {\path{doi:10.1016/j.phpro.2012.02.506}}.
 
 \bibitem{aki}
-T.~I. et. al., Application of the generic electronics for time projection
+T.~Isobe, et~al., Application of the generic electronics for time projection
   chamber (get) readout system for heavy radioactive isotope collision
   experiments, Nucl. Instr. Meth. Phys. Res. A 899~(11) (2018) 43--48.
 \newblock \href {http://dx.doi.org/10.1016/j.nima.2018.05.022}
   {\path{doi:10.1016/j.nima.2018.05.022}}.
 
 \bibitem{fairroot}
-M.~A.-T. et. al., The fairroot framework, J. Phys.: Conf. Ser. 396~(2).
+M.~Al-Turany, et~al., The fairroot framework, J. Phys.: Conf. Ser. 396~(2).
 \newblock \href {http://dx.doi.org/10.1088/1742-6596/396/2/022001}
   {\path{doi:10.1088/1742-6596/396/2/022001}}.
 
 \bibitem{rave}
-W.~Waltenberger, Rave—a detector-independent toolkit to reconstruct vertices,
+W.~Waltenberger, Rave a detector-independent toolkit to reconstruct vertices,
   IEEE Transactions on Nuclear Science 58~(2) (2011) 434--444.
 \newblock \href {http://dx.doi.org/10.1109/TNS.2011.2119492}
   {\path{doi:10.1109/TNS.2011.2119492}}.
 
 \bibitem{gatti}
-E.~G. et. al., Optimum geometry for strip cathodes or grids in mwpc for
+E.~Gatti, et~al., Optimum geometry for strip cathodes or grids in mwpc for
   avalanche localization along the anode wires, Nucl. Instr. Meth. Phys. Res. A
   163 (1979) 83--92.
 \newblock \href {http://dx.doi.org/10.1016/0029-554X(79)90035-1}

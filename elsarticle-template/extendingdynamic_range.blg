@@ -5,24 +5,24 @@ The style file: elsarticle-num.bst
 Database file #1: mybibfile.bib
 You've used 15 entries,
             2937 wiz_defined-function locations,
-            776 strings with 7338 characters,
-and the built_in function-call counts, 4181 in all, are:
-= -- 442
-> -- 66
+            776 strings with 7370 characters,
+and the built_in function-call counts, 4412 in all, are:
+= -- 464
+> -- 99
 < -- 0
-+ -- 32
-- -- 17
-* -- 326
-:= -- 572
++ -- 43
+- -- 28
+* -- 359
+:= -- 616
 add.period$ -- 29
 call.type$ -- 15
 change.case$ -- 14
 chr.to.int$ -- 0
 cite$ -- 15
-duplicate$ -- 104
+duplicate$ -- 115
 empty$ -- 484
-format.name$ -- 18
-if$ -- 1097
+format.name$ -- 40
+if$ -- 1141
 int.to.chr$ -- 0
 int.to.str$ -- 15
 missing$ -- 16
