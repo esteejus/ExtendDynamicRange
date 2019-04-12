@@ -5,7 +5,7 @@ The style file: elsarticle-num.bst
 Database file #1: mybibfile.bib
 You've used 15 entries,
             2937 wiz_defined-function locations,
-            776 strings with 7400 characters,
+            776 strings with 7399 characters,
 and the built_in function-call counts, 4378 in all, are:
 = -- 462
 > -- 93

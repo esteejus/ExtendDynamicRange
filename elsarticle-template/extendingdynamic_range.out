@@ -1,7 +1,17 @@
 \BOOKMARK [1][-]{section.1}{Introduction}{}% 1
-\BOOKMARK [1][-]{section.2}{Pad Response Function}{}% 2
-\BOOKMARK [1][-]{section.3}{Pad Response Function vs. crossing angle}{}% 3
-\BOOKMARK [1][-]{section.4}{Experimental data}{}% 4
-\BOOKMARK [1][-]{section.5}{Results}{}% 5
-\BOOKMARK [1][-]{section.6}{Conclusion}{}% 6
-\BOOKMARK [1][-]{section.7}{Acknowledgments}{}% 7
+\BOOKMARK [2][-]{subsection.1.1}{TPC Overview}{section.1}% 2
+\BOOKMARK [2][-]{subsection.1.2}{Configuration of the pad and wire planes}{section.1}% 3
+\BOOKMARK [2][-]{subsection.1.3}{Generic Electronics for TPCs}{section.1}% 4
+\BOOKMARK [2][-]{subsection.1.4}{Analysis Software}{section.1}% 5
+\BOOKMARK [2][-]{subsection.1.5}{Definition of clustering}{section.1}% 6
+\BOOKMARK [1][-]{section.2}{Pad Response Function}{}% 7
+\BOOKMARK [2][-]{subsection.2.1}{Gatti Pad Response Function}{section.2}% 8
+\BOOKMARK [2][-]{subsection.2.2}{Experimental Pad Response Function}{section.2}% 9
+\BOOKMARK [1][-]{section.3}{Pad Response Function vs. crossing angle}{}% 10
+\BOOKMARK [1][-]{section.4}{Method of Desaturation}{}% 11
+\BOOKMARK [1][-]{section.5}{Experimental data}{}% 12
+\BOOKMARK [1][-]{section.6}{Results}{}% 13
+\BOOKMARK [2][-]{subsection.6.1}{Low gain vs corrected high gain}{section.6}% 14
+\BOOKMARK [2][-]{subsection.6.2}{Particle Identification \(PID\)}{section.6}% 15
+\BOOKMARK [1][-]{section.7}{Conclusion}{}% 16
+\BOOKMARK [1][-]{section.8}{Acknowledgments}{}% 17
