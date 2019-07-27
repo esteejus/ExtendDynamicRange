@@ -1,6 +1,5 @@
-%\documentclass[3p,twocolumn]{elsarticle}
+%\documentclass[final,number,5p,twocolumn]{elsarticle}
 \documentclass[review,number,sort&compress]{elsarticle}
-\usepackage{lineno}
 \usepackage{graphicx}
 \usepackage[export]{adjustbox}%for left right graphic adjust
 \usepackage{amsmath}
@@ -17,7 +16,7 @@
 \usepackage{lineno,hyperref}
 \modulolinenumbers[5]
 \linenumbers
-\journal{Journal of \LaTeX\ Templates}
+\journal{Nuclear Instruments \& Methods in Physics Research A }
 
 %%%%%%%%%%%%%%%%%%%%%%%
 %% Elsevier bibliography styles
@@ -119,9 +118,6 @@ TPC\sep heavy ion collisions \sep dynamic range \sep
 
 \end{frontmatter}
 
-\linenumbers
-
-
 \section{Introduction} 
 
 As charged particles resulting from a Heavy Ion Collision (HIC) pass through a Time Projection Chamber, they ionize the gas in the drift region of the chamber. These freed electrons drift under influence of the electric and magnetic fields until they arrive at the avalanche region where they are multiplied in the presence of the high electric fields of wire \cite{blumrol}, GEM \cite{gem}, or Mircromegas structures \cite{micromeg}. Image currents induced in nearby pad electrodes are read-out into electronics to obtain the trajectories and stopping powers, $\langle dE/dx\rangle$, of the charged particles traversing the TPC.
@@ -130,9 +126,8 @@ In high energy HICs most of the resulting particles have charge signs of $\pm$e 
 
 Figure \ref{fig:intro} shows some of the expected stopping powers of light particles with Z=1$\sim$3 typically measured in Sn + Sn collisions at an intermediate incident energy of $E$/A=270 MeV by the S$\pi$RIT TPC, \cite{shane}. Here the red lines in the figure are the predicted energy loss curves, the most probable $dE/dx$, as a function of rigidity, or $p/q$, generated from Geant4 \cite{genfit} simulations. 
 
-The typical dynamic range expected from TPC electronics is on the order of 1000:1 for the signal to noise ratio of the maximum measurable signal. To determine a track's position at a certain point with sufficient position resolution, a cluster of several pads from the induced charge distribution must be observed. This typically requires calculating or fitting the mean value position from 2-3 adjacent pads. To measure minimum ionizing particles, one typically would like the smallest charge in the distribution to have a signal to noise ratio of at least 6:1. If the central pad, containing the largest fraction of charge induced in the cluster, holds 80\%, the two adjacent pads each hold 10\%. For these adjacent pads to have a 6:1 signal to noise ratio, the middle pad, holding the largest charge, would have a signal to noise of around 50:1. 
-
- This means the effective dynamic range in a TPC is roughly 1000/50 = 20 times that of a minimum ionizing particle's signal in a given pad. The dashed lines and vertical blue bar in Fig.~ \ref{fig:intro} are separated by a factor of 20, representing the typical effective dynamic range in a TPC. This dynamic range estimate should be regarded as approximate because the energy loss fluctuates significantly about the most probable energy loss, with a long ``Landau'' like tail, as described by Bichsel \cite{bichsel}. Nevertheless, the blue dashed lines and vertical blue bar illustrate that the range of energy losses sampled in a fixed gain readout system is limited. One can change the gain and shift the energy loss range that can be sampled, but the dynamic range itself cannot be increased.
+The maximum signal to noise ratio reached in the S$\pi$RIT TPC electronics is about 800:1. To determine a track's position at a certain point with sufficient position resolution, a cluster of several pads from the induced charge distribution must be observed. This typically requires calculating or fitting the mean value position from 2-3 adjacent pads. To measure minimum ionizing particles, one typically would like the smallest charge in the distribution to have a signal to noise ratio of at least 6:1. If the central pad, containing the largest fraction of charge induced in the cluster, holds 80\%, the two adjacent pads each hold 10\%. For these adjacent pads to have a 6:1 signal to noise ratio, the middle pad, holding the largest charge, would have a signal to noise of around 50:1, meaning the effective dynamic range in a TPC is roughly 16 $\times$ minimum ionizing particle's signal in a given pad. 
+The dashed lines and vertical blue bar in Fig.~ \ref{fig:intro} are separated by a factor of 16, representing the typical effective dynamic range in a TPC. This dynamic range estimate should be regarded as approximate because the energy loss fluctuates significantly about the most probable energy loss, with a long ``Landau'' like tail, as described by Bichsel \cite{bichsel}. Nevertheless, the blue dashed lines and vertical blue bar illustrate that the range of energy losses sampled in a fixed gain readout system is limited. One can change the gain and shift the energy loss range that can be sampled, but the dynamic range itself cannot be increased.
 
   
 \begin{figure}[ht!]
@@ -155,23 +150,27 @@ For ease of illustration and discussion in this paper, we use a coordinate syste
 
 \begin{figure}[ht!]
 \includegraphics[width=\linewidth]{fig2}
-\caption{Cartoon showing the 3 wire planes and a section of the pad plane. $h1$ = 4 mm, $h2$ = 8 mm, $h3$ =14 mm, $d1$ = 4 mm, $d2$ = 1 mm.}
+\caption{Cartoon showing the 3 wire planes and a section of the pad plane. The  electron drift lines are shown for the electrons produced from a charge particle passing through the gas volume. $h1$ = 4 mm, $h2$ = 8 mm, $h3$ =14 mm, $d1$ = 4 mm, $d2$ = 1 mm.}
 \label{fig:padwire}
 \end{figure}
 
 \subsection{Configuration of the pad and wire planes} 
-The S$\pi$RIT TPC pad plane is composed of rectangular charge sensitive pads, each with an $x$ dimension of 8 mm, and a $z$ dimension of 12 mm. These pads are arranged in a grid measuring 112 by 108 pads with a total area of 1344~mm~x~864~mm.
+The S$\pi$RIT TPC pad plane is composed of rectangular charge sensitive pads, each with an $x$ dimension of 8 mm, and a $z$ dimension of 12 mm. These pads are arranged in a grid measuring 112 by 108 pads with a total area of 1344~mm~x~864~mm. Each pad is held to the detector ground and serve as an input into the TPC electronics. 
 
 As illustrated in Fig.~\ref{fig:padwire}, there are three wire planes below the pad plane, with the wires aligned along the $x$ axis. The wire plane farthest from the pad plane (14 mm) operates as an ion-gate or a gating grid. Details on the design and operation of the gating grid can be found in \cite{suwat}. The middle wire plane (8~ mm) is grounded. When the gating grid is open, electrons ionized by reaction products in the drift volume move along the $y$ direction along the electric field lines through both the gating grid and ground planes, and eventually avalanche on the anode wires. 
 
-The anode wire plane is closest to the pad plane (4 mm), consisting of 20 $\mu$m diameter wires spaced 4 mm apart. In the vicinity of these wires an avalanche occurs multiplying the secondary electrons on the order of 1000 times, creating electron and ion pairs. It is the motion of these slow moving ions drifting away from the anode wires that induces image charges on the read-out pads. The distribution of image charges on the pad plane is centered about the avalanche position on the anode wires and its width is fixed by the distance from the anode wire to the pad plane. 
+The anode wire plane is closest to the pad plane (4 mm), consisting of 20 $\mu$m diameter wires spaced 4 mm apart. In the vicinity of these wires an avalanche occurs multiplying the secondary electrons on the order of 1000 times, creating electron and ion pairs. In the vicinity of the anode wire the ions move very quickly away due to the high electric fields there. It is this quick motion of the ions in the vicinity of the anode wires that induces image charges on the read-out pads. The distribution of image charges on the pad plane is centered about the avalanche position on the anode wires and its width is fixed by the distance from the anode wire to the pad plane. The ions slow down significantly in the presence of a low electric field (a factor of $10^{-4}$ slower than the electron drift velocity) \citep{blumrol}, which occurs only a couple of $cm$ away from the wire. The induced signal due to this slow motion is filtered out by the pre-amplifier in the electronics. Eventually some of the ions from the avalanche will terminate on the pad plane, while most terminate on the ground and gating grid (most of the time the gating grid is in a closed configuration).
+
+
 
 The anode wires are sectioned off into 14 independent sections, each containing 26 wires with 12 sections biased to 1460 V. This setting was optimized to ensure minimum ionizing particles, such as pions, would have a signal to noise ratio of around 20:1. The two remaining sections were biased to 1214 V, reducing the gas gain by a factor of 10, as compared to the other anode sections. As demonstrated by the EOS TPC \citep{eos}, lowering the anode wires effectively extended the dynamic range.  This gain reduction allowed for a direct validation of the new method for extending the dynamic range presented here. 
 
 \subsection{Generic Electronics for TPCs}
-Signals in the S$\pi$RIT TPC are amplified and digitized by the Generic Electronics for TPCs (GET) system, which can allow a large number of readout configurations \cite{get}. As details of our implementation of the GET system are described in \citep{aki}, our description can be focused on the options that are relevant to this paper.
+The induced charge from each pad are input into one of the 12k charge sensitive pre-amplifiers, it is then shaped and digitized, all by the Generic Electronics for TPCs (GET) system \cite{get}. As details of our implementation of the GET system are described in \citep{aki}, our description of the electronics can be limited to the options relevant to this paper.
 
-The electronics for each pad has a shaping constant of 117 ns and reads out the induced signal on the pads at a 25 MHz sampling rate. The dynamic range of the GET electronics was set to 120 fC and digitized over a 12 Bit ADC range which corresponds to 4096 channels of resolution. The typical rms noise level was about 5 ADC channels about 400 electrons, corresponding to a signal to noise ratio of the maximum signal of about 800:1. 
+The electronics for each pad has a shaping constant of 117 ns and reads out the induced signal on the pads at a 25 MHz sampling rate. The dynamic range of the GET electronics was set to 120 fC and digitized over a 12 Bit ADC range which corresponds to 4096 channels of resolution. The typical rms noise level was about 5 ADC channels about 400 electrons, corresponding to a maximum signal to noise ratio of about 
+
+. 
 
 In the data discussed here, the variations between electronics channels were calibrated by measuring the response of each channel to an injected reference pulse, covering the full dynamic range of each channel, reducing the variations to less than a few percent.
  
@@ -373,9 +372,9 @@ Looking at the collision data, shown in Fig.~\ref{fig:data_combine}, we also see
 
 \section{Conclusion}
 
-The saturation  of the electronics reduces $dE/dx$ resolution and even the maximum charge observable inside of a TPC.  We have shown that some of the saturated information is recoverable. Since the Pad Response Function of the TPC is fixed by the anode wire geometries, an experimental PRF can be calculated from the unsaturated experimental data. The charge distribution resulting from an avalanche on a wire must follow this PRF even if the electronics of some channels directly under the avalanche are saturated while the pads farther away are not saturated. By using these unsaturated pads and minimizing a $\chi^2$ fit  to the PRF we recover the unknown saturated charges. 
+The saturation  of the electronics reduces $dE/dx$ resolution and even the maximum charge observable inside of a TPC.  We have shown that some of the saturated information is recoverable. Since the Pad Response Function of the TPC is fixed by the anode wire geometries, an experimental PRF can be calculated from the unsaturated experimental data. The charge distribution resulting from an avalanche on a wire must follow this PRF even if the electronics of some channels directly under the avalanche are saturated while the pads farther away are not saturated. By using these unsaturated pads and minimizing a $\chi^2$ fit  to the PRF we recover the unknown saturated charges. This method will not be able to extend the dynamic range in regions of the TPC where the track density is high, such as around the target location, due to the mixing of charges from other tracks. 
 
-The dynamic range was extended by at least a factor of 5, as demonstrated by the improved PID lines, and quantified by direct comparison to low gain sections of the TPC. This improved PID will allow for us to extend the momentum distributions of all species to lower momenta and to heavier ions than what was previously available. 
+The dynamic range was extended by at least a factor of 5, as demonstrated by the improved PID lines, and quantified by direct comparison to low gain sections of the TPC. This improved PID allows us to extend the momentum distributions of all species to lower momenta and to heavier ions than what was previously available. 
 
 
 \section{Acknowledgments}
