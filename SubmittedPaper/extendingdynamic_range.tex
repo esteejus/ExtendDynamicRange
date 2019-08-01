@@ -168,9 +168,7 @@ The anode wires are sectioned off into 14 independent sections, each containing 
 \subsection{Generic Electronics for TPCs}
 The induced charge from each pad are input into one of the 12k charge sensitive pre-amplifiers, it is then shaped and digitized, all by the Generic Electronics for TPCs (GET) system \cite{get}. As details of our implementation of the GET system are described in \citep{aki}, our description of the electronics can be limited to the options relevant to this paper.
 
-The electronics for each pad has a shaping constant of 117 ns and reads out the induced signal on the pads at a 25 MHz sampling rate. The dynamic range of the GET electronics was set to 120 fC and digitized over a 12 Bit ADC range which corresponds to 4096 channels of resolution. The typical rms noise level was about 5 ADC channels about 400 electrons, corresponding to a maximum signal to noise ratio of about 
-
-. 
+The electronics for each pad has a shaping constant of 117 ns and reads out the induced signal on the pads at a 25 MHz sampling rate. The dynamic range of the GET electronics was set to 120 fC and digitized over a 12 Bit ADC range which corresponds to 4096 channels of resolution. The typical rms noise level was about 5 ADC channels about 400 electrons, corresponding to a maximum signal to noise ratio of about 800:1. The largest charge resulting from minimum ionizing particles (in a given pad) is about 240 ADC, giving a signal to noise of about 50:1. Therefore the effective dynamic range of the S$\pi$RIT TPC is a factor of 16 times that of minimum ionizing particles. 
 
 In the data discussed here, the variations between electronics channels were calibrated by measuring the response of each channel to an injected reference pulse, covering the full dynamic range of each channel, reducing the variations to less than a few percent.
  
